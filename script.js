@@ -38,9 +38,14 @@ function filterGallery(btn, cat) {
 const BOBO_API_URL = 'https://bobo-serverr-production.up.railway.app';
 const boboApi = {
   async request(path, options = {}) {
-    const response = await fetch(`${BOBO_API_URL}${path}`, options);
-    const body = await response.json().catch(() => null);
-    return { response, body };
+    try {
+      const response = await fetch(`${BOBO_API_URL}${path}`, options);
+      const body = await response.json().catch(() => null);
+      return { response, body };
+    } catch (error) {
+      console.error('BOBO fetch failed:', error);
+      return { response: null, body: null };
+    }
   },
   login(username, password) {
     return this.request('/auth/login', {
@@ -132,7 +137,12 @@ async function loadParentDashboard() {
 
   try {
     const { response: childResponse, body: child } = await boboApi.getChild(childId);
+    if (!childResponse) throw new Error('network');
     if (childResponse.status === 404) throw new Error('child-not-found');
+    if (childResponse.status >= 500) {
+      parentDashboardStatus.textContent = 'BOBO server is currently unavailable. Please try again later.';
+      return;
+    }
     if (!childResponse.ok || !child) throw new Error('server');
     addChildDetail('Child Name', child.name);
     addChildDetail('Child ID', child.childId);
@@ -140,7 +150,7 @@ async function loadParentDashboard() {
     parentDashboardStatus.textContent = 'Loading meals...';
 
     const { response: photosResponse, body: photos } = await boboApi.getPhotos(childId);
-    if (!photosResponse.ok) throw new Error('server');
+    if (!photosResponse) throw new Error('server');
     displayPhotos(Array.isArray(photos) ? photos : []);
     parentDashboardStatus.textContent = '';
   } catch (error) {
@@ -160,8 +170,13 @@ parentLoginForm.addEventListener('submit', async (event) => {
 
   try {
     const { response, body: user } = await boboApi.login(formData.get('username'), formData.get('password'));
+    if (!response) throw new Error('network');
     if (response.status === 401 || response.status === 403) {
       parentLoginStatus.textContent = 'Invalid username or password.';
+      return;
+    }
+    if (response.status >= 500) {
+      parentLoginStatus.textContent = 'BOBO server is currently unavailable. Please try again later.';
       return;
     }
     if (!response.ok || !user) throw new Error('server');
