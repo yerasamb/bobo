@@ -158,14 +158,14 @@
   .teacher-card { background: white; border-radius: var(--radius); padding: 28px; text-align: center; box-shadow: 0 4px 20px rgba(45,42,62,0.07); transition: all .25s; }
   .teacher-card:hover { transform: translateY(-5px); box-shadow: 0 14px 36px rgba(45,42,62,0.11); }
   .teacher-avatar { width: 90px; height: 90px; border-radius: 50%; margin: 0 auto 16px; display: flex; align-items: center; justify-content: center; font-size: 3rem; position: relative; overflow: hidden; }
-  .teacher-avatar-large { width: 200px; height: 200px; }
+  .teacher-avatar-large { width: 200px; height: 200px; display: flex; align-items: center; justify-content: center; }
 
   /* Ensure the larger avatar scales nicely on small screens */
   @media (max-width: 700px) {
     .teacher-avatar-large { width: 140px; height: 140px; }
   }
   .teacher-avatar::after { content: ''; position: absolute; inset: -3px; border-radius: 50%; border: 2.5px solid transparent; z-index: -1; }
-  .teacher-photo { width: 100%; height: 100%; object-fit: cover; }
+  .teacher-photo { width: 100%; height: 100%; object-fit: cover; object-position: center center; display: block; margin: 0 auto; }
   .teacher-card h3 { font-family: 'Quicksand', sans-serif; font-weight: 700; font-size: 1.05rem; margin-bottom: 4px; }
   .teacher-card .t-role { font-size: .82rem; font-weight: 700; padding: 4px 12px; border-radius: 20px; display: inline-block; margin-bottom: 14px; }
   .teacher-card p { font-size: .85rem; color: var(--mid); line-height: 1.6; }
