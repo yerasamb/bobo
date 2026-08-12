@@ -1,0 +1,1766 @@
+<!DOCTYPE html>
+<html lang="kk">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+  <title>Bobo Balabaqsha</title>
+
+  <script src="https://cdn.tailwindcss.com"></script>
+
+  <style>
+    html,
+    body {
+      margin: 0;
+      padding: 0;
+      min-height: 100%;
+    }
+
+    body {
+    background: #FFFFFF;
+    }
+
+    .toy-card {
+      background: rgba(255, 255, 255, 0.94);
+      border: 1px solid rgba(148, 163, 184, 0.22);
+      box-shadow: 0 16px 40px rgba(15, 23, 42, 0.08);
+    }
+
+    /* Character positioning */
+    .background-character {
+      position: fixed;
+      bottom: 0;
+      object-fit: contain;
+      pointer-events: none;
+      user-select: none;
+      z-index: 1;
+    }
+
+    #bg-bear {
+    left: 10px;
+    width: 450px;
+    max-width: 38vw;
+}
+
+    #bg-dino {
+      right: 10px;
+      width: 420px;
+      max-width: 34vw;
+    }
+@media (max-width: 900px) {
+
+  #bg-bear {
+
+    left: 0;
+
+    width: 330px;
+
+    max-width: 36vw;
+
+  }
+
+  #bg-dino {
+
+    right: 0;
+
+    width: 320px;
+
+    max-width: 35vw;
+
+  }
+
+}
+
+/* Mobile */
+
+@media (max-width: 640px) {
+
+  #bg-bear {
+
+    width: 220px;
+
+    max-width: 48vw;
+
+    left: -20px;
+
+    bottom: 0;
+
+  }
+
+  #bg-dino {
+
+    width: 210px;
+
+    max-width: 48vw;
+
+    right: -15px;
+
+    bottom: 0;
+
+  }
+
+}
+    /* Keep characters behind the login card */
+    .login-container {
+      position: relative;
+      z-index: 10;
+    }
+
+    /* Tablet */
+    @media (max-width: 900px) {
+      #bg-bear {
+        left: 0;
+        width: 250px;
+        max-width: 30vw;
+      }
+
+      #bg-dino {
+        right: 0;
+        width: 320px;
+        max-width: 35vw;
+      }
+    }
+
+    /* Mobile */
+    @media (max-width: 640px) {
+      #bg-bear {
+        width: 180px;
+        max-width: 42vw;
+        left: -15px;
+        bottom: 0;
+      }
+
+      #bg-dino {
+        width: 210px;
+        max-width: 48vw;
+        right: -15px;
+        bottom: 0;
+      }
+
+      .login-container {
+        max-width: 390px;
+      }
+    }
+  </style>
+</head>
+
+<body class="relative min-h-screen flex flex-col items-center justify-center p-4 overflow-x-hidden bg-white">
+  <!-- ========================================================= -->
+  <!-- BACKGROUND CHARACTERS -->
+  <!-- ========================================================= -->
+
+  <!-- BOBO BEAR -->
+  <img
+    id="bg-bear"
+    src="bear.png"
+    alt="BOBO Bear"
+    class="background-character"
+  />
+
+  <!-- DINO -->
+  <img
+    id="bg-dino"
+    src="sunny.png"
+    alt="Dino"
+    class="background-character"
+  />
+
+
+  <!-- ========================================================= -->
+  <!-- LOGIN / REGISTER CONTAINER -->
+  <!-- ========================================================= -->
+
+  <div class="login-container w-full max-w-md">
+
+    <div class="toy-card w-full bg-white/90 backdrop-blur-md p-8 rounded-[32px]">
+
+      <!-- ===================================================== -->
+      <!-- HEADER -->
+      <!-- ===================================================== -->
+
+      <div class="relative flex flex-col items-center mb-6">
+
+        <!-- LANGUAGE SELECTOR -->
+
+        <div
+          class="absolute right-0 top-0 flex gap-1 bg-slate-100 p-1 rounded-full text-[10px] text-slate-500 font-semibold"
+        >
+          <button
+            onclick="setLanguage('kk')"
+            id="lang-kk"
+            class="px-2 py-0.5 rounded-full bg-white shadow-xs text-emerald-600 font-bold"
+          >
+            KZ
+          </button>
+
+          <button
+            onclick="setLanguage('ru')"
+            id="lang-ru"
+            class="px-2 py-0.5 rounded-full hover:text-emerald-600"
+          >
+            RU
+          </button>
+
+          <button
+            onclick="setLanguage('en')"
+            id="lang-en"
+            class="px-2 py-0.5 rounded-full hover:text-emerald-600"
+          >
+            EN
+          </button>
+        </div>
+
+
+        <!-- LOGO -->
+
+        <div
+          class="inline-block border-2 border-[#819B86] rounded-2xl px-6 py-2 mb-3 mt-6 text-center"
+        >
+          <h1 class="text-3xl font-extrabold tracking-tight text-[#48634B]">
+            B<span class="text-[#E87333]">o</span>B<span class="text-[#E87333]">o</span>
+          </h1>
+
+          <p class="text-[9px] tracking-widest text-[#819B86] uppercase font-medium mt-0.5">
+            Balabaqsha
+          </p>
+        </div>
+
+
+        <h2
+          id="t-screen-title"
+          class="text-xl font-bold text-slate-700"
+        >
+          Кіру
+        </h2>
+
+      </div>
+
+
+      <!-- ===================================================== -->
+      <!-- LOGIN FORM -->
+      <!-- ===================================================== -->
+
+      <form
+        id="login-form"
+        class="space-y-4"
+        onsubmit="handleLogin(event)"
+      >
+
+        <div>
+
+          <label
+            id="t-login-user-lbl"
+            class="block text-sm text-slate-600 mb-1"
+          >
+            Пайдаланушы аты
+          </label>
+
+          <input
+            id="login-username"
+            type="text"
+            placeholder="Пайдаланушы аты"
+            required
+            class="w-full px-4 py-3 bg-slate-50 border border-slate-200 rounded-full text-slate-800 focus:outline-none focus:border-emerald-500"
+          />
+
+        </div>
+
+
+        <div>
+
+          <label
+            id="t-login-pass-lbl"
+            class="block text-sm text-slate-600 mb-1"
+          >
+            Құпия сөз
+          </label>
+
+          <input
+            id="login-password"
+            type="password"
+            placeholder="Құпия сөз"
+            required
+            class="w-full px-4 py-3 bg-slate-50 border border-slate-200 rounded-full text-slate-800 focus:outline-none focus:border-emerald-500"
+          />
+
+        </div>
+
+
+        <button
+          id="t-login-btn"
+          type="submit"
+          class="w-full mt-2 bg-[#5BAA80] hover:bg-[#4a916c] text-white font-medium py-3 rounded-full transition duration-200 shadow-sm"
+        >
+          Кіру
+        </button>
+
+
+        <div class="text-center pt-2 space-y-3">
+
+          <p
+            id="t-forgot-link"
+            onclick="openResetModal()"
+            class="text-xs text-slate-400 cursor-pointer hover:underline hover:text-emerald-600"
+          >
+            Құпия сөзді ұмыттыңыз ба?
+          </p>
+
+
+          <div>
+
+            <span
+              id="t-no-acc"
+              class="text-xs text-slate-400"
+            >
+              Аккаунтыңыз жоқ па?
+            </span>
+
+            <br />
+
+            <button
+              id="t-reg-switch-btn"
+              type="button"
+              onclick="toggleScreen('register')"
+              class="mt-1 px-6 py-1 bg-slate-200 hover:bg-slate-300 text-slate-600 text-xs rounded-full transition font-medium"
+            >
+              Тіркелу
+            </button>
+
+          </div>
+
+        </div>
+
+      </form>
+
+
+      <!-- ===================================================== -->
+      <!-- REGISTER FORM -->
+      <!-- ===================================================== -->
+
+      <form
+        id="register-form"
+        class="space-y-4 hidden"
+        onsubmit="handleRegister(event)"
+      >
+
+        <div>
+
+          <label
+            id="t-reg-user-lbl"
+            class="block text-sm text-slate-600 mb-1"
+          >
+            Пайдаланушы аты
+          </label>
+
+          <input
+            id="reg-username"
+            type="text"
+            placeholder="Пайдаланушы аты"
+            required
+            class="w-full px-4 py-3 bg-slate-50 border border-slate-200 rounded-full text-slate-800 focus:outline-none focus:border-emerald-500"
+          />
+
+        </div>
+
+
+        <div>
+
+          <label
+            id="t-reg-pass-lbl"
+            class="block text-sm text-slate-600 mb-1"
+          >
+            Құпия сөз
+          </label>
+
+          <input
+            id="reg-password"
+            type="password"
+            placeholder="Құпия сөз"
+            required
+            class="w-full px-4 py-3 bg-slate-50 border border-slate-200 rounded-full text-slate-800 focus:outline-none focus:border-emerald-500"
+          />
+
+        </div>
+
+
+        <div>
+
+          <input
+            id="reg-confirm-password"
+            type="password"
+            placeholder="Құпия сөзді растау"
+            required
+            class="w-full px-4 py-3 bg-slate-50 border border-slate-200 rounded-full text-slate-800 focus:outline-none focus:border-emerald-500"
+          />
+
+        </div>
+
+
+        <div>
+
+          <label
+            id="t-reg-group-lbl"
+            class="block text-sm text-slate-600 mb-1"
+          >
+            Топты таңдаңыз:
+          </label>
+
+          <select
+            id="reg-group-select"
+            onchange="filterChildrenByGroup()"
+            required
+            class="w-full px-4 py-3 bg-slate-50 border border-slate-200 rounded-full text-slate-700 focus:outline-none focus:border-emerald-500"
+          >
+
+            <option value="">
+              -- Топты таңдаңыз --
+            </option>
+
+          </select>
+
+        </div>
+
+
+        <div>
+
+          <label
+            id="t-reg-child-lbl"
+            class="block text-sm text-slate-600 mb-1"
+          >
+            Баланың толық аты-жөні:
+          </label>
+
+          <select
+            id="reg-child-select"
+            required
+            class="w-full px-4 py-3 bg-slate-50 border border-slate-200 rounded-full text-slate-700 focus:outline-none focus:border-emerald-500"
+          >
+
+            <option value="">
+              Баланы таңдаңыз
+            </option>
+
+          </select>
+
+        </div>
+
+
+        <button
+          id="t-reg-btn"
+          type="submit"
+          class="w-full mt-2 bg-[#5BAA80] hover:bg-[#4a916c] text-white font-medium py-3 rounded-full transition duration-200 shadow-sm"
+        >
+          Тіркелу
+        </button>
+
+
+        <div class="text-center pt-2">
+
+          <button
+            id="t-cancel-btn"
+            type="button"
+            onclick="toggleScreen('login')"
+            class="px-6 py-1 bg-slate-200 hover:bg-slate-300 text-slate-600 text-xs rounded-full transition font-medium"
+          >
+            Болдырмау
+          </button>
+
+        </div>
+
+      </form>
+
+    </div>
+
+  </div>
+
+
+  <!-- ========================================================= -->
+  <!-- RESET PASSWORD MODAL -->
+  <!-- ========================================================= -->
+
+  <div
+    id="reset-modal"
+    class="fixed inset-0 bg-slate-900/40 backdrop-blur-xs flex items-center justify-center p-4 z-50 hidden"
+  >
+
+    <div
+      class="bg-white w-full max-w-sm rounded-3xl p-6 shadow-lg border border-slate-100"
+    >
+
+      <h3
+        id="t-reset-title"
+        class="text-lg font-bold text-slate-800 text-center mb-4"
+      >
+        Құпия сөзді қалпына келтіру
+      </h3>
+
+
+      <form
+        onsubmit="handleResetPassword(event)"
+        class="space-y-3"
+      >
+
+        <input
+          id="reset-username"
+          type="text"
+          placeholder="Пайдаланушы аты"
+          required
+          class="w-full px-4 py-2.5 bg-slate-50 border border-slate-200 rounded-full text-sm text-slate-800 focus:outline-none focus:border-emerald-500"
+        />
+
+
+        <input
+          id="reset-new-password"
+          type="password"
+          placeholder="Жаңа құпия сөз"
+          required
+          class="w-full px-4 py-2.5 bg-slate-50 border border-slate-200 rounded-full text-sm text-slate-800 focus:outline-none focus:border-emerald-500"
+        />
+
+
+        <button
+          id="t-reset-submit-btn"
+          type="submit"
+          class="w-full bg-[#5BAA80] hover:bg-[#4a916c] text-white font-medium py-2.5 rounded-full text-sm transition"
+        >
+          Сақтау
+        </button>
+
+
+        <button
+          id="t-reset-cancel-btn"
+          type="button"
+          onclick="closeResetModal()"
+          class="w-full text-xs text-slate-400 py-1 hover:underline"
+        >
+          Болдырмау
+        </button>
+
+      </form>
+
+    </div>
+
+  </div>
+
+
+  <!-- ========================================================= -->
+  <!-- PHOTO FEED -->
+  <!-- ========================================================= -->
+
+  <div
+    id="feed-section"
+    class="w-full max-w-md hidden space-y-4 relative z-10"
+  >
+
+    <div
+      class="flex justify-between items-center bg-white p-4 rounded-2xl shadow-sm border border-slate-100"
+    >
+
+      <div>
+
+        <h2
+          id="t-feed-title"
+          class="font-bold text-slate-800"
+        >
+          Тамақтану есептері
+        </h2>
+
+        <p
+          id="t-feed-sub"
+          class="text-xs text-slate-400"
+        >
+          Балаңыздың суреттері
+        </p>
+
+      </div>
+
+
+      <button
+        id="t-logout-btn"
+        onclick="handleLogout()"
+        class="text-xs bg-slate-100 hover:bg-slate-200 px-3 py-2 rounded-full text-slate-600 font-semibold"
+      >
+        Шығу
+      </button>
+
+    </div>
+
+
+    <div
+      id="photo-list"
+      class="space-y-4"
+    ></div>
+
+  </div>
+
+
+  <!-- ========================================================= -->
+  <!-- JAVASCRIPT -->
+  <!-- ========================================================= -->
+
+  <script>
+
+    const API_BASE =
+      "https://bobo-serverr-production.up.railway.app";
+
+    let allChildren = [];
+
+    let currentLang = "kk";
+
+
+    /* ========================================================= */
+    /* TRANSLATIONS */
+    /* ========================================================= */
+
+    const translations = {
+
+      kk: {
+
+        titleLogin: "Кіру",
+
+        titleRegister: "Тіркелу жасау",
+
+        userLbl: "Пайдаланушы аты",
+
+        passLbl: "Құпия сөз",
+
+        passConfirmHolder: "Құпия сөзді растау",
+
+        groupLbl: "Топты таңдаңыз:",
+
+        selectGroupOpt: "-- Топты таңдаңыз --",
+
+        childLbl: "Баланың толық аты-жөні:",
+
+        selectChildOpt: "Баланы таңдаңыз",
+
+        loginBtn: "Кіру",
+
+        regBtn: "Тіркелу",
+
+        forgotLink: "Құпия сөзді ұмыттыңыз ба?",
+
+        noAcc: "Аккаунтыңыз жоқ па?",
+
+        cancelBtn: "Болдырмау",
+
+        resetTitle: "Құпия сөзді қалпына келтіру",
+
+        newPassHolder: "Жаңа құпия сөз",
+
+        saveBtn: "Сақтау",
+
+        feedTitle: "Тамақтану есептері",
+
+        feedSub: "Балаңыздың суреттері",
+
+        logoutBtn: "Шығу",
+
+        noPhotos: "Суреттер әлі жүктелмеді 📸",
+
+        teacherPrefix: "Тәрбиеші: ",
+
+        timePrefix: "Уақыты: ",
+
+        meals: {
+
+          Breakfast: "Таңғы ас",
+
+          Lunch: "Түскі ас",
+
+          Snack: "Бесіндік",
+
+          Dinner: "Кешкі ас"
+
+        }
+
+      },
+
+
+      ru: {
+
+        titleLogin: "Вход",
+
+        titleRegister: "Регистрация",
+
+        userLbl: "Имя пользователя",
+
+        passLbl: "Пароль",
+
+        passConfirmHolder: "Подтвердите пароль",
+
+        groupLbl: "Выберите группу:",
+
+        selectGroupOpt: "-- Выберите группу --",
+
+        childLbl: "ФИО ребенка:",
+
+        selectChildOpt: "Выберите ребенка",
+
+        loginBtn: "Войти",
+
+        regBtn: "Зарегистрироваться",
+
+        forgotLink: "Забыли пароль?",
+
+        noAcc: "Нет аккаунта?",
+
+        cancelBtn: "Отмена",
+
+        resetTitle: "Сброс пароля",
+
+        newPassHolder: "Новый пароль",
+
+        saveBtn: "Сохранить",
+
+        feedTitle: "Отчеты по питанию",
+
+        feedSub: "Фотографии вашего ребенка",
+
+        logoutBtn: "Выйти",
+
+        noPhotos: "Фотографии еще не загружены 📸",
+
+        teacherPrefix: "Воспитатель: ",
+
+        timePrefix: "Время: ",
+
+        meals: {
+
+          Breakfast: "Завтрак",
+
+          Lunch: "Обед",
+
+          Snack: "Полдник",
+
+          Dinner: "Ужин"
+
+        }
+
+      },
+
+
+      en: {
+
+        titleLogin: "Log In",
+
+        titleRegister: "Sign Up",
+
+        userLbl: "Username",
+
+        passLbl: "Password",
+
+        passConfirmHolder: "Confirm Password",
+
+        groupLbl: "Select Group:",
+
+        selectGroupOpt: "-- Select Group --",
+
+        childLbl: "Child's Full Name:",
+
+        selectChildOpt: "Select Child",
+
+        loginBtn: "Sign In",
+
+        regBtn: "Register",
+
+        forgotLink: "Forgot password?",
+
+        noAcc: "Don't have an account?",
+
+        cancelBtn: "Cancel",
+
+        resetTitle: "Reset Password",
+
+        newPassHolder: "New Password",
+
+        saveBtn: "Save",
+
+        feedTitle: "Meal Reports",
+
+        feedSub: "Photos of your child",
+
+        logoutBtn: "Log Out",
+
+        noPhotos: "No photos uploaded yet 📸",
+
+        teacherPrefix: "Teacher: ",
+
+        timePrefix: "Time: ",
+
+        meals: {
+
+          Breakfast: "Breakfast",
+
+          Lunch: "Lunch",
+
+          Snack: "Snack",
+
+          Dinner: "Dinner"
+
+        }
+
+      }
+
+    };
+
+
+    /* ========================================================= */
+    /* PAGE LOAD */
+    /* ========================================================= */
+
+    window.onload = async () => {
+
+      const savedChildId =
+        localStorage.getItem("childId");
+
+
+      if (savedChildId) {
+
+        showFeed(savedChildId);
+
+      } else {
+
+        loadChildrenData();
+
+      }
+
+
+      setLanguage("kk");
+
+    };
+
+
+    /* ========================================================= */
+    /* LANGUAGE */
+    /* ========================================================= */
+
+    function setLanguage(lang) {
+
+      currentLang = lang;
+
+      const t = translations[lang];
+
+
+      ["kk", "ru", "en"].forEach(l => {
+
+        const btn =
+          document.getElementById(`lang-${l}`);
+
+
+        if (l === lang) {
+
+          btn.className =
+            "px-2 py-0.5 rounded-full bg-white shadow-xs text-emerald-600 font-bold";
+
+        } else {
+
+          btn.className =
+            "px-2 py-0.5 rounded-full hover:text-emerald-600 text-slate-500";
+
+        }
+
+      });
+
+
+      const isLogin =
+        !document
+          .getElementById("login-form")
+          .classList.contains("hidden");
+
+
+      document.getElementById("t-screen-title").innerText =
+        isLogin
+          ? t.titleLogin
+          : t.titleRegister;
+
+
+      document.getElementById("t-login-user-lbl").innerText =
+        t.userLbl;
+
+      document.getElementById("login-username").placeholder =
+        t.userLbl;
+
+
+      document.getElementById("t-login-pass-lbl").innerText =
+        t.passLbl;
+
+      document.getElementById("login-password").placeholder =
+        t.passLbl;
+
+
+      document.getElementById("t-login-btn").innerText =
+        t.loginBtn;
+
+
+      document.getElementById("t-forgot-link").innerText =
+        t.forgotLink;
+
+
+      document.getElementById("t-no-acc").innerText =
+        t.noAcc;
+
+
+      document.getElementById("t-reg-switch-btn").innerText =
+        t.regBtn;
+
+
+      document.getElementById("t-reg-user-lbl").innerText =
+        t.userLbl;
+
+
+      document.getElementById("reg-username").placeholder =
+        t.userLbl;
+
+
+      document.getElementById("t-reg-pass-lbl").innerText =
+        t.passLbl;
+
+
+      document.getElementById("reg-password").placeholder =
+        t.passLbl;
+
+
+      document.getElementById("reg-confirm-password").placeholder =
+        t.passConfirmHolder;
+
+
+      document.getElementById("t-reg-group-lbl").innerText =
+        t.groupLbl;
+
+
+      document.getElementById("t-reg-child-lbl").innerText =
+        t.childLbl;
+
+
+      document.getElementById("t-reg-btn").innerText =
+        t.regBtn;
+
+
+      document.getElementById("t-cancel-btn").innerText =
+        t.cancelBtn;
+
+
+      document.getElementById("t-reset-title").innerText =
+        t.resetTitle;
+
+
+      document.getElementById("reset-username").placeholder =
+        t.userLbl;
+
+
+      document.getElementById("reset-new-password").placeholder =
+        t.newPassHolder;
+
+
+      document.getElementById("t-reset-submit-btn").innerText =
+        t.saveBtn;
+
+
+      document.getElementById("t-reset-cancel-btn").innerText =
+        t.cancelBtn;
+
+
+      document.getElementById("t-feed-title").innerText =
+        t.feedTitle;
+
+
+      document.getElementById("t-feed-sub").innerText =
+        t.feedSub;
+
+
+      document.getElementById("t-logout-btn").innerText =
+        t.logoutBtn;
+
+    }
+
+
+    /* ========================================================= */
+    /* LOGIN / REGISTER SWITCH */
+    /* ========================================================= */
+
+    function toggleScreen(screen) {
+
+      const isLogin =
+        screen === "login";
+
+
+      document
+        .getElementById("login-form")
+        .classList
+        .toggle("hidden", !isLogin);
+
+
+      document
+        .getElementById("register-form")
+        .classList
+        .toggle("hidden", isLogin);
+
+
+      document.getElementById("t-screen-title").innerText =
+        isLogin
+          ? translations[currentLang].titleLogin
+          : translations[currentLang].titleRegister;
+
+    }
+
+
+    /* ========================================================= */
+    /* RESET MODAL */
+    /* ========================================================= */
+
+    function openResetModal() {
+
+      document
+        .getElementById("reset-modal")
+        .classList
+        .remove("hidden");
+
+    }
+
+
+    function closeResetModal() {
+
+      document
+        .getElementById("reset-modal")
+        .classList
+        .add("hidden");
+
+    }
+
+
+    /* ========================================================= */
+    /* RESET PASSWORD */
+    /* ========================================================= */
+
+    async function handleResetPassword(e) {
+
+      e.preventDefault();
+
+
+      const username =
+        document.getElementById("reset-username").value;
+
+
+      const newPassword =
+        document.getElementById("reset-new-password").value;
+
+
+      try {
+
+        const res = await fetch(
+          `${API_BASE}/auth/reset-password`,
+          {
+            method: "POST",
+
+            headers: {
+              "Content-Type": "application/json"
+            },
+
+            body: JSON.stringify({
+              username,
+              newPassword
+            })
+          }
+        );
+
+
+        if (!res.ok) {
+
+          throw new Error(
+            "Error resetting password."
+          );
+
+        }
+
+
+        alert(
+          "Password updated successfully!"
+        );
+
+
+        closeResetModal();
+
+      } catch (err) {
+
+        alert(err.message);
+
+      }
+
+    }
+
+
+    /* ========================================================= */
+    /* LOAD CHILDREN */
+    /* ========================================================= */
+
+    async function loadChildrenData() {
+
+      try {
+
+        const res =
+          await fetch(`${API_BASE}/children`);
+
+
+        if (res.ok) {
+
+          allChildren =
+            await res.json();
+
+
+          const groups =
+            [
+              ...new Set(
+                allChildren.map(c => c.group)
+              )
+            ];
+
+
+          const groupSelect =
+            document.getElementById(
+              "reg-group-select"
+            );
+
+
+          groupSelect.innerHTML =
+            `<option value="">${translations[currentLang].selectGroupOpt}</option>` +
+            groups
+              .map(
+                g =>
+                  `<option value="${g}">${g}</option>`
+              )
+              .join("");
+
+        }
+
+      } catch (err) {
+
+        console.error(
+          "Failed to load children",
+          err
+        );
+
+      }
+
+    }
+
+
+    /* ========================================================= */
+    /* FILTER CHILDREN */
+    /* ========================================================= */
+
+    function filterChildrenByGroup() {
+
+      const selectedGroup =
+        document
+          .getElementById("reg-group-select")
+          .value;
+
+
+      const childSelect =
+        document.getElementById(
+          "reg-child-select"
+        );
+
+
+      const filtered =
+        allChildren.filter(
+          c => c.group === selectedGroup
+        );
+
+
+      if (filtered.length === 0) {
+
+        childSelect.innerHTML =
+          `<option value="">${translations[currentLang].selectChildOpt}</option>`;
+
+        return;
+
+      }
+
+
+      childSelect.innerHTML =
+        `<option value="">${translations[currentLang].selectChildOpt}</option>` +
+
+        filtered
+          .map(c => {
+
+            const targetId =
+              c.childId || c.id;
+
+
+            return `
+              <option value="${targetId}">
+                ${c.name}
+              </option>
+            `;
+
+          })
+          .join("");
+
+    }
+
+
+    /* ========================================================= */
+    /* LOGIN */
+    /* ========================================================= */
+
+    async function handleLogin(e) {
+
+      e.preventDefault();
+
+
+      const username =
+        document.getElementById(
+          "login-username"
+        ).value;
+
+
+      const password =
+        document.getElementById(
+          "login-password"
+        ).value;
+
+
+      try {
+
+        const res =
+          await fetch(
+            `${API_BASE}/auth/login`,
+            {
+              method: "POST",
+
+              headers: {
+                "Content-Type":
+                  "application/json"
+              },
+
+              body: JSON.stringify({
+                username,
+                password
+              })
+            }
+          );
+
+
+        if (!res.ok) {
+
+          throw new Error(
+            "Invalid username or password!"
+          );
+
+        }
+
+
+        const data =
+          await res.json();
+
+
+        if (data.child) {
+
+          localStorage.setItem(
+            "childId",
+            data.child
+          );
+
+
+          showFeed(data.child);
+
+        } else {
+
+          alert(
+            "No child registered with this account."
+          );
+
+        }
+
+      } catch (err) {
+
+        alert(err.message);
+
+      }
+
+    }
+
+
+    /* ========================================================= */
+    /* REGISTER */
+    /* ========================================================= */
+
+    async function handleRegister(e) {
+
+      e.preventDefault();
+
+
+      const username =
+        document.getElementById(
+          "reg-username"
+        ).value;
+
+
+      const password =
+        document.getElementById(
+          "reg-password"
+        ).value;
+
+
+      const confirmPassword =
+        document.getElementById(
+          "reg-confirm-password"
+        ).value;
+
+
+      const childId =
+        document.getElementById(
+          "reg-child-select"
+        ).value;
+
+
+      if (password !== confirmPassword) {
+
+        alert(
+          "Passwords do not match!"
+        );
+
+        return;
+
+      }
+
+
+      if (!childId) {
+
+        alert(
+          "Please select a child!"
+        );
+
+        return;
+
+      }
+
+
+      try {
+
+        const res =
+          await fetch(
+            `${API_BASE}/auth/register`,
+            {
+              method: "POST",
+
+              headers: {
+                "Content-Type":
+                  "application/json"
+              },
+
+              body: JSON.stringify({
+
+                username: username,
+
+                password: password,
+
+                role: "PARENT",
+
+                child: childId
+
+              })
+
+            }
+          );
+
+
+        if (!res.ok) {
+
+          throw new Error(
+            "Registration failed."
+          );
+
+        }
+
+
+        alert(
+          "Registration successful!"
+        );
+
+
+        localStorage.setItem(
+          "childId",
+          childId
+        );
+
+
+        showFeed(childId);
+
+      } catch (err) {
+
+        alert(err.message);
+
+      }
+
+    }
+
+
+    /* ========================================================= */
+    /* PHOTO FEED */
+    /* ========================================================= */
+
+    async function showFeed(childId) {
+
+      const mainCard =
+        document.querySelector(
+          ".login-container"
+        );
+
+
+      if (mainCard) {
+
+        mainCard.classList.add(
+          "hidden"
+        );
+
+      }
+
+
+      const bear =
+        document.getElementById(
+          "bg-bear"
+        );
+
+
+      const dino =
+        document.getElementById(
+          "bg-dino"
+        );
+
+
+      if (bear) {
+
+        bear.classList.add(
+          "hidden"
+        );
+
+      }
+
+
+      if (dino) {
+
+        dino.classList.add(
+          "hidden"
+        );
+
+      }
+
+
+      document
+        .getElementById("feed-section")
+        .classList
+        .remove("hidden");
+
+
+      const photoList =
+        document.getElementById(
+          "photo-list"
+        );
+
+
+      try {
+
+        const res =
+          await fetch(
+            `${API_BASE}/photos/${childId}`
+          );
+
+
+        const photos =
+          await res.json();
+
+
+        if (
+          !photos ||
+          photos.length === 0
+        ) {
+
+          photoList.innerHTML =
+            `
+              <p class="text-center text-slate-500 py-8">
+                ${translations[currentLang].noPhotos}
+              </p>
+            `;
+
+          return;
+
+        }
+
+
+        const monthNames = {
+
+          kk: [
+            "Қаңтар",
+            "Ақпан",
+            "Наурыз",
+            "Сәуір",
+            "Мамыр",
+            "Маусым",
+            "Шілде",
+            "Тамыз",
+            "Қыркүйек",
+            "Қазан",
+            "Қараша",
+            "Желтоқсан"
+          ],
+
+          ru: [
+            "января",
+            "февраля",
+            "марта",
+            "апреля",
+            "мая",
+            "июня",
+            "июля",
+            "августа",
+            "сентября",
+            "октября",
+            "ноября",
+            "декабря"
+          ],
+
+          en: [
+            "January",
+            "February",
+            "March",
+            "April",
+            "May",
+            "June",
+            "July",
+            "August",
+            "September",
+            "October",
+            "November",
+            "December"
+          ]
+
+        };
+
+
+        const formatLocalDateTime =
+          (uploadTimeString) => {
+
+            if (!uploadTimeString)
+              return "";
+
+
+            try {
+
+              let timeStr =
+                String(
+                  uploadTimeString
+                ).trim();
+
+
+              if (
+                !timeStr.endsWith("Z") &&
+                !timeStr.includes("+")
+              ) {
+
+                timeStr += "Z";
+
+              }
+
+
+              const dateObj =
+                new Date(timeStr);
+
+
+              if (
+                isNaN(
+                  dateObj.getTime()
+                )
+              ) {
+
+                return uploadTimeString;
+
+              }
+
+
+              const utcMs =
+                dateObj.getTime();
+
+
+              const localMs =
+                utcMs +
+                5 *
+                  60 *
+                  60 *
+                  1000;
+
+
+              const localDate =
+                new Date(localMs);
+
+
+              const day =
+                localDate.getUTCDate();
+
+
+              const monthIndex =
+                localDate.getUTCMonth();
+
+
+              const year =
+                localDate.getUTCFullYear();
+
+
+              const hours =
+                String(
+                  localDate.getUTCHours()
+                ).padStart(2, "0");
+
+
+              const minutes =
+                String(
+                  localDate.getUTCMinutes()
+                ).padStart(2, "0");
+
+
+              const activeMonths =
+                monthNames[currentLang] ||
+                monthNames.ru;
+
+
+              const monthText =
+                activeMonths[monthIndex];
+
+
+              return `${day} ${monthText} ${year}, ${hours}:${minutes}`;
+
+            } catch (e) {
+
+              return uploadTimeString;
+
+            }
+
+          };
+
+
+        photoList.innerHTML =
+
+          photos
+            .map(p => {
+
+              const rawMeal =
+                p.mealType ||
+                "Lunch";
+
+
+              const translatedMeal =
+                (
+                  translations[
+                    currentLang
+                  ].meals &&
+                  translations[
+                    currentLang
+                  ].meals[rawMeal]
+                ) ||
+                rawMeal;
+
+
+              const teacher =
+                p.teacher ||
+                "alma";
+
+
+              const formattedDateTime =
+                formatLocalDateTime(
+                  p.uploadTime
+                );
+
+
+              return `
+
+                <div
+                  class="bg-white rounded-3xl overflow-hidden shadow-sm border border-slate-100 mb-4"
+                >
+
+                  <img
+                    src="${p.imageUrl}"
+                    class="w-full h-72 object-cover"
+                  />
+
+
+                  <div
+                    class="p-4 flex justify-between items-start"
+                  >
+
+                    <div>
+
+                      <span
+                        class="font-bold text-[#5BAA80] text-lg block"
+                      >
+                        ${translatedMeal}
+                      </span>
+
+
+                      ${
+                        formattedDateTime
+                          ? `
+                            <span
+                              class="text-xs text-slate-400 font-medium block mt-0.5"
+                            >
+                              ${translations[currentLang].timePrefix}
+                              ${formattedDateTime}
+                            </span>
+                          `
+                          : ""
+                      }
+
+                    </div>
+
+
+                    <div class="text-right">
+
+                      <span
+                        class="text-xs text-slate-500 font-semibold block bg-slate-100 px-3 py-1 rounded-full"
+                      >
+                        ${translations[currentLang].teacherPrefix}
+                        ${teacher}
+                      </span>
+
+                    </div>
+
+                  </div>
+
+                </div>
+
+              `;
+
+            })
+            .join("");
+
+      } catch (err) {
+
+        photoList.innerHTML =
+          `
+            <p class="text-center text-red-500 py-8">
+              Failed to load photos.
+            </p>
+          `;
+
+      }
+
+    }
+
+
+    /* ========================================================= */
+    /* LOGOUT */
+    /* ========================================================= */
+
+    function handleLogout() {
+
+      localStorage.clear();
+
+      window.location.reload();
+
+    }
+
+  </script>
+
+</body>
+</html>

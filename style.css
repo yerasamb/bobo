@@ -190,40 +190,6 @@
   .gallery-item .overlay span { color: white; font-size: .85rem; font-weight: 700; opacity: 0; transform: translateY(8px); transition: all .25s; }
   .gallery-item:hover .overlay span { opacity: 1; transform: translateY(0); }
 
-  /* ── PARENT PORTAL ── */
-  #parent-login { background: linear-gradient(135deg, #EFFBF5 0%, #F4F0FF 100%); }
-  .parent-portal-wrap { max-width: 960px; margin: 40px auto 0; }
-  .portal-login { max-width: 480px; margin: 0 auto; padding: 32px; background: white; border-radius: var(--radius); box-shadow: var(--shadow); }
-  .portal-login h3 { margin-bottom: 8px; font-family: 'Quicksand', sans-serif; font-size: 1.4rem; }
-  .portal-login > p:first-of-type { margin-bottom: 24px; color: var(--mid); font-size: .9rem; line-height: 1.6; }
-  .portal-login label { display: block; margin: 16px 0 8px; color: var(--mid); font-size: .9rem; font-weight: 700; }
-  .portal-login input { width: 100%; padding: 13px 16px; border: 2px solid rgba(45,42,62,.1); border-radius: 12px; color: var(--dark); background: var(--cream); font: inherit; outline: none; }
-  .portal-login input:focus { border-color: var(--grass); }
-  .portal-login button { width: 100%; margin-top: 24px; border: 0; border-radius: 12px; padding: 13px 24px; background: var(--grass); box-shadow: 0 5px 14px rgba(86,197,150,.3); color: white; cursor: pointer; font: inherit; font-weight: 700; transition: transform .2s, background .2s; }
-  .portal-login button:hover { background: #43ae80; transform: translateY(-1px); }
-  .portal-login button:disabled { cursor: wait; opacity: .7; transform: none; }
-  .portal-status { min-height: 1.25rem; margin-top: 12px; color: #C0224B; font-size: .9rem; font-weight: 700; }
-  .portal-signup { margin-top: 18px; color: var(--mid); font-size: .82rem; text-align: center; }
-  .portal-dashboard { background: white; border-radius: var(--radius); box-shadow: var(--shadow); overflow: hidden; }
-  .portal-dashboard-head { display: flex; align-items: center; justify-content: space-between; gap: 20px; padding: 28px 28px 12px; }
-  .portal-dashboard-head h3 { font-family: 'Quicksand', sans-serif; font-size: 1.45rem; }
-  .portal-dashboard .portal-status { margin: 0 28px 12px; color: var(--mid); }
-  .portal-logout { border: 2px solid rgba(255,107,138,.25); border-radius: 12px; padding: 10px 16px; background: white; color: #C0224B; cursor: pointer; font: inherit; font-weight: 700; }
-  .portal-logout:hover { background: #FFF0F5; }
-  .child-details { display: grid; grid-template-columns: repeat(3, 1fr); gap: 16px; padding: 24px 28px; background: rgba(86,197,150,.1); }
-  .child-detail { background: white; border-radius: 14px; padding: 14px 16px; }
-  .child-detail span { display: block; margin-bottom: 4px; color: var(--mid); font-size: .78rem; font-weight: 700; text-transform: uppercase; }
-  .child-detail strong { font-family: 'Quicksand', sans-serif; font-size: 1rem; }
-  .food-photos-section { padding: 28px; }
-  .food-photos-section h3 { margin-bottom: 20px; font-family: 'Quicksand', sans-serif; font-size: 1.3rem; }
-  .portal-empty { color: var(--mid); }
-  .food-photos-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(210px, 1fr)); gap: 18px; }
-  .food-photo-card { overflow: hidden; border: 1px solid rgba(45,42,62,.08); border-radius: 18px; background: var(--cream); box-shadow: 0 4px 14px rgba(45,42,62,.06); }
-  .food-photo-card img { display: block; width: 100%; height: 180px; background: var(--light); object-fit: cover; }
-  .food-photo-placeholder { display: grid; height: 180px; place-items: center; background: var(--light); color: var(--mid); font-size: .9rem; }
-  .food-photo-info { padding: 16px; }
-  .food-photo-info h4 { margin-bottom: 10px; font-family: 'Quicksand', sans-serif; font-size: 1rem; }
-  .food-photo-info p { margin-top: 5px; color: var(--mid); font-size: .82rem; }
 
   /* ── EVENTS ── */
   #events { background: var(--light); }
