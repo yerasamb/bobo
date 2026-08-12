@@ -155,17 +155,17 @@
   /* ── TEACHERS ── */
   #teachers { background: var(--light); }
   .teachers-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(220px, 1fr)); gap: 24px; }
-  .teacher-card { background: white; border-radius: var(--radius); padding: 28px; text-align: left; box-shadow: 0 4px 20px rgba(45,42,62,0.07); transition: all .25s; display: flex; align-items: center; gap: 24px; }
+  .teacher-card { background: white; border-radius: var(--radius); padding: 28px; text-align: center; box-shadow: 0 4px 20px rgba(45,42,62,0.07); transition: all .25s; }
   .teacher-card:hover { transform: translateY(-5px); box-shadow: 0 14px 36px rgba(45,42,62,0.11); }
-  .teacher-avatar { width: 90px; height: 90px; border-radius: 50%; margin: 0; display: flex; align-items: center; justify-content: center; font-size: 3rem; position: relative; overflow: hidden; flex-shrink: 0; }
-  .teacher-avatar-large { width: 200px; height: 200px; display: flex; align-items: center; justify-content: center; margin: 0; flex-shrink: 0; }
-  .teacher-avatar-large .teacher-photo { object-position: center center; }
+  .teacher-avatar { width: 90px; height: 90px; border-radius: 50%; margin: 0 auto 16px; display: flex; align-items: center; justify-content: center; font-size: 3rem; position: relative; overflow: hidden; }
+  .teacher-avatar-large { width: 200px; height: 200px; display: flex; align-items: center; justify-content: center; }
+  /* Nudge the large avatar and position the image slightly left */
+  .teacher-avatar-large { transform: translateX(-8px); }
+  .teacher-avatar-large .teacher-photo { object-position: 38% center; }
 
   /* Ensure the larger avatar scales nicely on small screens */
-  @media (max-width: 900px) {
-    .teacher-card { flex-direction: column; text-align: center; align-items: center; }
+  @media (max-width: 700px) {
     .teacher-avatar-large { width: 140px; height: 140px; }
-    .teacher-avatar { margin-bottom: 16px; }
   }
   .teacher-avatar::after { content: ''; position: absolute; inset: -3px; border-radius: 50%; border: 2.5px solid transparent; z-index: -1; }
   .teacher-photo { width: 100%; height: 100%; object-fit: cover; object-position: center; display: block; margin: 0 auto; }
