@@ -14,14 +14,18 @@
     <span>Bobo Kindergarten</span>
   </a>
   <div class="nav-links" id="navLinks">
-    <a href="#about">About</a>
-    <a href="#programs">Programs</a>
-    <a href="#schedule">Schedule</a>
-    <a href="#teachers">Teachers</a>
-    <a href="#gallery">Gallery</a>
-    <a href="log.html">Parent Login</a>
-    <a href="#events">Events</a>
-    <a href="#faq">FAQ</a>
+    <a href="#about" data-i18n="about">About</a>
+    <a href="#programs" data-i18n="programs">Programs</a>
+    <a href="#schedule" data-i18n="schedule">Schedule</a>
+    <a href="#teachers" data-i18n="teachers">Teachers</a>
+    <a href="#gallery" data-i18n="gallery">Gallery</a>
+    <a href="log.html" class="nav-portal" data-i18n="login">Child's food</a>
+    <a href="#events" data-i18n="events">Events</a>
+  </div>
+  <div class="lang-switcher" aria-label="Language selector">
+    <button class="lang-btn active" data-lang="kk" type="button">KZ</button>
+    <button class="lang-btn" data-lang="ru" type="button">RU</button>
+    <button class="lang-btn" data-lang="en" type="button">EN</button>
   </div>
   <div class="hamburger" id="hamburger" onclick="toggleMenu()">
     <span></span><span></span><span></span>
@@ -31,16 +35,16 @@
 <!-- HERO -->
 <section class="hero" id="home">
   <div class="hero-text">
-    <h1>Where Every Child <em>Shines</em> & Grows</h1>
-    <p>A nurturing, joyful environment where curious minds blossom. We blend play-based learning with structured development to give every child the best start in life.</p>
+    <h1 data-i18n-html="heroTitle">Where Every Child <em>Shines</em> &amp; Grows</h1>
+    <p data-i18n="heroText">A nurturing, joyful environment where curious minds blossom. We blend play-based learning with structured development to give every child the best start in life.</p>
     <div class="hero-btns">
-      <a href="#programs" class="btn-secondary">🎨 Our Programs</a>
+      <a href="log.html" class="btn-secondary" data-i18n="heroBtn">👩‍🍳 Child's food</a>
     </div>
     <div class="hero-stats">
-      <div class="stat"><span class="stat-num">7+</span><span class="stat-label">Years of Experience</span></div>
-      <div class="stat"><span class="stat-num">340+</span><span class="stat-label">Happy Graduates</span></div>
-      <div class="stat"><span class="stat-num">18</span><span class="stat-label">Expert Teachers</span></div>
-      <div class="stat"><span class="stat-num">4.7★</span><span class="stat-label">Parent Rating</span></div>
+      <div class="stat"><span class="stat-num">7+</span><span class="stat-label" data-i18n="stat1">Years of Experience</span></div>
+      <div class="stat"><span class="stat-num">340+</span><span class="stat-label" data-i18n="stat2">Happy Graduates</span></div>
+      <div class="stat"><span class="stat-num">18</span><span class="stat-label" data-i18n="stat3">Expert Teachers</span></div>
+      <div class="stat"><span class="stat-num">4.7★</span><span class="stat-label" data-i18n="stat4">Parent Rating</span></div>
     </div>
   </div>
   <div class="hero-visual">
@@ -74,19 +78,19 @@
       <div class="about-img-box main">🧒</div>
       <div class="about-img-box accent">🌈</div>
       <div class="about-year">
-        <div class="num">12</div>
+        <div class="num">7</div>
         <div class="lbl">Years of Joy</div>
       </div>
     </div>
     <div>
       <div class="section-tag" style="background:rgba(86,197,150,0.12);color:var(--grass)">🌱 About Us</div>
       <h2 class="section-title">A Place Your Child Will <em style="color:var(--rose);font-style:normal">Love</em> Every Day</h2>
-      <p class="section-sub">Founded in 2012, Bobo Kindergarten has been a beacon of excellence in early childhood education. Our philosophy centers on holistic development — nurturing cognitive, emotional, social, and physical growth.</p>
+      <p class="section-sub">Founded in 2019, Bobo Kindergarten has been a beacon of excellence in early childhood education. Our philosophy centers on holistic development — nurturing cognitive, emotional, social, and physical growth.</p>
       <div class="about-cards">
         <div class="about-card">
           <div class="icon">🏡</div>
-          <h4>Safe Environment</h4>
-          <p>CCTV monitored, child-proofed, and hygiene-certified spaces where kids feel completely safe.</p>
+          <h4>Quality and quantity</h4>
+          <p>Neuro-exercise,Robotics,Salt cave,Choreography,Karate,Group speech therapy,Fairy tale therapy,Art therapy,Sensory integration,English,Online camera</p>
         </div>
         <div class="about-card">
           <div class="icon">🎯</div>
@@ -118,39 +122,45 @@
   <div class="programs-grid reveal">
     <div class="program-card p1">
       <div class="p-icon">🐣</div>
-      <h3>Baby Steps (Nursery)</h3>
-      <p>Gentle introduction to social play, sensory exploration, and building comfort away from home in a warm, caring setting.</p>
-      <span class="p-age">👶 Ages 1.5–2.5</span>
+      <h3>Kulynshak</h3>
+      <span class="p-teacher">Kuralai and Bakyt</span>
+      <span class="p-age">👶 Ages 1.5+</span>
     </div>
     <div class="program-card p2">
-      <div class="p-icon">🌱</div>
-      <h3>Little Explorers</h3>
-      <p>Discovery-based learning through nature, art, and storytelling. Building early language, math foundations, and self-confidence.</p>
-      <span class="p-age">🧒 Ages 2.5–3.5</span>
+      <div class="p-icon">🧸</div>
+      <h3>Baldyrgan</h3>
+     <span class="p-teacher">Ulbosun and Lyazzat</span>
+      <span class="p-age">🧒 Ages 1,5+ </span>
     </div>
     <div class="program-card p3">
       <div class="p-icon">🎨</div>
-      <h3>Creative Minds</h3>
-      <p>Arts, music, and hands-on crafts that foster imagination and self-expression while developing fine motor skills.</p>
-      <span class="p-age">👦 Ages 3–5</span>
+      <h3>Baldauren</h3>
+      <span class="p-teacher">Arailym</span>
+      <span class="p-age">👦 Ages 3+ </span>
     </div>
     <div class="program-card p4">
-      <div class="p-icon">📚</div>
-      <h3>Smart Readers</h3>
-      <p>Early literacy and numeracy in a fun, engaging way — preparing children to thrive in primary school.</p>
-      <span class="p-age">📖 Ages 4–6</span>
+      <div class="p-icon">⭐</div>
+      <h3>Zhuldyz</h3>
+      <span class="p-teacher">Arai and Sandugash</span>
+      <span class="p-age">📖 Ages 3,5+ </span>
     </div>
     <div class="program-card p5">
       <div class="p-icon">🧠</div>
-      <h3>STEM Juniors</h3>
-      <p>Introduction to science, technology, engineering and math through experiments, building blocks, and logical challenges.</p>
-      <span class="p-age">🔬 Ages 4–6</span>
+      <h3>Baiterek</h3>
+      <span class="p-teacher">Gulmira and Dinara</span>
+      <span class="p-age">🔬 Ages 3,5-4,5</span>
     </div>
     <div class="program-card p6">
-      <div class="p-icon">🌙</div>
-      <h3>After-School Care</h3>
-      <p>Supervised activities, homework help, outdoor play, and healthy snacks for children until 7 PM.</p>
-      <span class="p-age">🌇 Until 7 PM</span>
+      <div class="p-icon">🦅</div>
+      <h3>Kyran</h3>
+      <span class="p-teacher">Bayan and Marzhan</span>
+      <span class="p-age">🪽 Ages 4-5</span>
+    </div>
+    <div class="program-card p7">
+      <div class="p-icon">🔥</div>
+      <h3>Zhalyn</h3>
+      <span class="p-teacher">Zhanar and Marzhan</span>
+      <span class="p-age">🌇 Ages 5+ </span>
     </div>
   </div>
 </section>
@@ -159,11 +169,25 @@
 <section id="schedule">
   <div class="center reveal" style="margin-bottom:48px">
     <div class="section-tag" style="background:rgba(255,184,48,0.12);color:#B26A00">⏰ Daily Routine</div>
-    <h2 class="section-title">Daily Schedule & Fees</h2>
+    <h2 class="section-title">Daily Schedule</h2>
     <p class="section-sub">A balanced, structured day designed to maximise learning, play, and rest.</p>
   </div>
+  <div class="schedule-group-picker reveal" aria-label="Choose a group schedule">
+    <button class="schedule-group-btn active" data-schedule-group="Kulynshak" type="button">Kulynshak</button>
+    <button class="schedule-group-btn" data-schedule-group="Baldyrgan" type="button">Baldyrgan</button>
+    <button class="schedule-group-btn" data-schedule-group="Baldauren" type="button">Baldauren</button>
+    <button class="schedule-group-btn" data-schedule-group="Zhuldyz" type="button">Zhuldyz</button>
+    <button class="schedule-group-btn" data-schedule-group="Baiterek" type="button">Baiterek</button>
+    <button class="schedule-group-btn" data-schedule-group="Kyran" type="button">Kyran</button>
+    <button class="schedule-group-btn" data-schedule-group="Zhalyn" type="button">Zhalyn</button>
+  </div>
   <div class="schedule-wrap reveal">
-    <div class="schedule-list">
+    <div>
+      <div class="schedule-group-heading">
+        <h3 id="scheduleGroupTitle">Kulynshak Daily Schedule</h3>
+        <p id="scheduleTemplateNote">Sample schedule — details will be confirmed by the group teacher.</p>
+      </div>
+      <div class="schedule-list" id="scheduleList">
       <div class="schedule-item active"><span class="time">7:30–8:30</span><div class="s-dot" style="background:var(--sky)"></div><div class="s-info"><h4>Morning Arrival & Free Play</h4><p>Drop-off, greetings, unstructured exploration</p></div></div>
       <div class="schedule-item"><span class="time">8:30–9:00</span><div class="s-dot" style="background:var(--grass)"></div><div class="s-info"><h4>Morning Circle & Calendar</h4><p>Songs, weather, news, mindfulness</p></div></div>
       <div class="schedule-item"><span class="time">9:00–10:00</span><div class="s-dot" style="background:var(--rose)"></div><div class="s-info"><h4>Learning Centres</h4><p>Literacy, numeracy, STEM stations</p></div></div>
@@ -173,28 +197,6 @@
       <div class="schedule-item"><span class="time">12:30–1:30</span><div class="s-dot" style="background:var(--grass)"></div><div class="s-info"><h4>Lunch & Afternoon Rest</h4><p>Nutritious lunch, nap for younger kids</p></div></div>
       <div class="schedule-item"><span class="time">1:30–3:00</span><div class="s-dot" style="background:var(--sky)"></div><div class="s-info"><h4>Language & Story Time</h4><p>Trilingual reading, storytelling</p></div></div>
       <div class="schedule-item"><span class="time">3:00–3:30</span><div class="s-dot" style="background:var(--rose)"></div><div class="s-info"><h4>Pick-Up / After-Care Begins</h4><p>Regular pick-up or extended care</p></div></div>
-    </div>
-    <div class="fees-box">
-      <h3>💰 Tuition & Fees</h3>
-      <div class="fee-row">
-        <div><div class="fee-name">🐣 Nursery (Half Day)</div><div style="font-size:.8rem;color:var(--mid)">7:30 AM – 1:30 PM</div></div>
-        <div class="fee-badge" style="background:rgba(79,195,247,0.15);color:#0288D1">₸45,000/mo</div>
-      </div>
-      <div class="fee-row">
-        <div><div class="fee-name">🌱 Pre-K (Full Day)</div><div style="font-size:.8rem;color:var(--mid)">7:30 AM – 3:30 PM</div></div>
-        <div class="fee-badge" style="background:rgba(86,197,150,0.15);color:#1B8A59">₸65,000/mo</div>
-      </div>
-      <div class="fee-row">
-        <div><div class="fee-name">📚 Kindergarten (Full Day)</div><div style="font-size:.8rem;color:var(--mid)">7:30 AM – 3:30 PM</div></div>
-        <div class="fee-badge" style="background:rgba(255,184,48,0.15);color:#B26A00">₸75,000/mo</div>
-      </div>
-      <div class="fee-row">
-        <div><div class="fee-name">🌙 After-Care Extension</div><div style="font-size:.8rem;color:var(--mid)">3:30 PM – 7:00 PM</div></div>
-        <div class="fee-badge" style="background:rgba(167,139,250,0.15);color:#5B21B6">₸20,000/mo</div>
-      </div>
-      <div class="fee-row">
-        <div><div class="fee-name">🍱 Lunch Program</div><div style="font-size:.8rem;color:var(--mid)">Nutritious daily meals</div></div>
-        <div class="fee-badge" style="background:rgba(255,107,138,0.12);color:#C0224B">₸12,000/mo</div>
       </div>
     </div>
   </div>
@@ -213,31 +215,112 @@
         <img src="SauleBaimakhanova.jpg" alt="Saule Baimakhanova" class="teacher-photo" />
       </div>
       <h3>Saule Baimakhanova</h3>
-      <div class="t-role">Head Teacher</div>
+      <div class="t-role">Founder</div>
     </div>
     <div class="teacher-card t2">
       <div class="teacher-avatar teacher-avatar-large">
         <img src="asel.jpg" alt="David Kim" class="teacher-photo" />
       </div>
-      <h3>David Kim</h3>
-      <div class="t-role">Arts & Music</div>
-      <p>Professional musician and art educator. Creates magical creative sessions that spark imagination in every child.</p>
+      <h3>Asel Beibytbekovna</h3>
+      <div class="t-role">Manager</div>
     </div>
     <div class="teacher-card t3">
       <div class="teacher-avatar teacher-avatar-large">
         <img src="gulnar.jpg" alt="Aisha Nurova" class="teacher-photo" />
       </div>
-      <h3>Aisha Nurova</h3>
-      <div class="t-role">STEM Lead</div>
-      <p>Engineering graduate turned early educator. Makes science come alive through hands-on experiments and building challenges.</p>
+      <h3>Gulnar</h3>
+      <div class="t-role">Cook</div>
     </div>
     <div class="teacher-card t4">
       <div class="teacher-avatar teacher-avatar-large">
         <img src="leila.jpg" alt="Maria Santos" class="teacher-photo" />
       </div>
-      <h3>Maria Santos</h3>
-      <div class="t-role">Nutrition & Care</div>
-      <p>Certified child nutritionist ensuring healthy, balanced meals and snacks. Also leads mindfulness and wellness activities.</p>
+      <h3>Leila</h3>
+      <div class="t-role">Doctor</div>
+    </div>
+    <div class="teacher-card t5">
+      <div class="teacher-avatar teacher-avatar-large">
+        <img src="zhanar.jpg" alt="David Kim" class="teacher-photo" />
+      </div>
+      <h3>Zhanar</h3>
+      <div class="t-role">The childcare worker for group Zhalyn</div>
+    </div>
+    <div class="teacher-card t6">
+      <div class="teacher-avatar teacher-avatar-large">
+        <img src="bayan.jpg" alt="David Kim" class="teacher-photo" />
+      </div>
+      <h3>Bayan</h3>
+      <div class="t-role">The childcare worker for group Kyran</div>
+    </div>
+    <div class="teacher-card t7">
+      <div class="teacher-avatar teacher-avatar-large">
+        <img src="gulmira.jpg" alt="David Kim" class="teacher-photo" />
+      </div>
+      <h3>Gulmira</h3>
+      <div class="t-role">The childcare worker for group Baiterek</div>
+    </div>
+    <div class="teacher-card t8">
+      <div class="teacher-avatar teacher-avatar-large">
+        <img src="NurlankyzyArai.jpg" alt="David Kim" class="teacher-photo" />
+      </div>
+      <h3>Arai</h3>
+      <div class="t-role">The childcare worker for group Zhuldyz</div>
+    </div>
+    <div class="teacher-card t9">
+      <div class="teacher-avatar teacher-avatar-large">
+        <img src="arailym.jpg" alt="David Kim" class="teacher-photo" />
+      </div>
+      <h3>Arailym</h3>
+      <div class="t-role">The childcare worker for group Baldauren</div>
+    </div>
+    <div class="teacher-card t10">
+      <div class="teacher-avatar teacher-avatar-large">
+        <img src="ulbolsyn.jpg" alt="David Kim" class="teacher-photo" />
+      </div>
+      <h3>Ulbosyn</h3>
+      <div class="t-role">The childcare worker for group Baldyrgan</div>
+    </div>
+    <div class="teacher-card t11">
+      <div class="teacher-avatar teacher-avatar-large">
+        <img src="kuralai.jpg" alt="David Kim" class="teacher-photo" />
+      </div>
+      <h3>Kuralai</h3>
+      <div class="t-role">The childcare worker for group Kulynshak</div>
+    </div>
+    <div class="teacher-card t12">
+      <div class="teacher-avatar teacher-avatar-large">
+        <img src="marzhan.jpg" alt="David Kim" class="teacher-photo" />
+      </div>
+      <h3>Marzhan</h3>
+      <div class="t-role">The nanny for Zhalyn and Kyran</div>
+    </div>
+    <div class="teacher-card t13">
+      <div class="teacher-avatar teacher-avatar-large">
+        <img src="dinara.jpg" alt="David Kim" class="teacher-photo" />
+      </div>
+      <h3>Dinara</h3>
+      <div class="t-role">The nanny for Baiterek </div>
+    </div>
+    <div class="teacher-card t14">
+      <div class="teacher-avatar teacher-avatar-large">
+        <img src="sandugash.jpg" alt="David Kim" class="teacher-photo" />
+      </div>
+      <h3>Sandugash</h3>
+      <div class="t-role">The nanny for Zhuldyz</div>
+    </div>
+    <div class="teacher-card t15">
+      <div class="teacher-avatar teacher-avatar-large">
+        <img src="lazzat.jpg" alt="David Kim" class="teacher-photo" />
+      </div>
+      <h3>Lyazzat</h3>
+      <div class="t-role">The nanny for Baldyrgan</div>
+    </div>
+    <div class="teacher-card t16">
+      <div class="teacher-avatar teacher-avatar-large">
+        <img src="bakyt.jpg" alt="David Kim" class="teacher-photo" />
+      </div>
+      <h3>Bakyt</h3>
+      <div class="t-role">The nanny for Kulynzhak </div>
     </div>
   </div>
 </section>
@@ -359,40 +442,6 @@
   </div>
 </section>
 
-<!-- FAQ -->
-<section id="faq">
-  <div class="center reveal">
-    <div class="section-tag" style="background:rgba(167,139,250,0.12);color:#5B21B6">❓ FAQ</div>
-    <h2 class="section-title">Frequently Asked Questions</h2>
-    <p class="section-sub">Everything you need to know about Bobo Kindergarten.</p>
-  </div>
-  <div class="faq-wrap reveal">
-    <div class="faq-item open">
-      <div class="faq-q" onclick="toggleFaq(this)">What age do you accept children from?<div class="toggle">+</div></div>
-      <div class="faq-a"><div class="faq-a-inner">We welcome children from 18 months to 6 years old across our various programs. Our Nursery program starts at 1.5 years, and our Pre-K and Kindergarten programs are available from age 2.5 to 6.</div></div>
-    </div>
-    <div class="faq-item">
-      <div class="faq-q" onclick="toggleFaq(this)">What languages are used in teaching?<div class="toggle">+</div></div>
-      <div class="faq-a"><div class="faq-a-inner">We offer a trilingual curriculum in English, Kazakh, and Russian. Each day includes dedicated time in each language, giving children a strong foundation in all three. Language immersion begins naturally through songs, stories, and play.</div></div>
-    </div>
-    <div class="faq-item">
-      <div class="faq-q" onclick="toggleFaq(this)">How do you handle dietary requirements and allergies?<div class="toggle">+</div></div>
-      <div class="faq-a"><div class="faq-a-inner">We take food safety very seriously. Families share dietary information with our team, and our certified nutritionist creates custom meal plans. We are a nut-free facility and accommodate all allergies, intolerances, and cultural dietary requirements.</div></div>
-    </div>
-    <div class="faq-item">
-      <div class="faq-q" onclick="toggleFaq(this)">What is the teacher-to-child ratio?<div class="toggle">+</div></div>
-      <div class="faq-a"><div class="faq-a-inner">We maintain a 1:6 ratio for Nursery (under 2 years), 1:8 for Pre-K, and 1:10 for Kindergarten. This ensures every child receives individual attention and care throughout their day.</div></div>
-    </div>
-    <div class="faq-item">
-      <div class="faq-q" onclick="toggleFaq(this)">How do you communicate with parents?<div class="toggle">+</div></div>
-      <div class="faq-a"><div class="faq-a-inner">We use our dedicated parent app for daily updates, photos, and reports. Each child receives a weekly learning summary. We hold monthly parent-teacher meetings and host termly open days. Our door is always open!</div></div>
-    </div>
-    <div class="faq-item">
-      <div class="faq-q" onclick="toggleFaq(this)">Is there a trial day available?<div class="toggle">+</div></div>
-      <div class="faq-a"><div class="faq-a-inner">Absolutely! We encourage all prospective families to book a free trial day. Your child spends a full session with us (accompanied by a parent if under 2), and you'll get a tour of our facilities and meet the team.</div></div>
-    </div>
-  </div>
-</section>
 
 <!-- FOOTER -->
 <footer>
@@ -415,28 +464,29 @@
     <div class="footer-col">
       <h4>Programs</h4>
       <ul>
-        <li><a href="#programs">Nursery (1.5–2.5)</a></li>
-        <li><a href="#programs">Pre-K (2.5–4)</a></li>
-        <li><a href="#programs">Kindergarten (4–6)</a></li>
-        <li><a href="#programs">STEM Juniors</a></li>
-        <li><a href="#programs">After-Care</a></li>
+        <li><a href="#programs">Zhalyn</a></li>
+        <li><a href="#programs">Kyran</a></li>
+        <li><a href="#programs">Baiterek</a></li>
+        <li><a href="#programs">Zhuldyz</a></li>
+        <li><a href="#programs">Baldauren</a></li>
+        <li><a href="#programs">Baldyrgan</a></li>
+        <li><a href="#programs">Kulynshak</a></li>
+
       </ul>
     </div>
     <div class="footer-col">
       <h4>Contact</h4>
       <ul>
-        <li><a href="tel:+77271234567">📞 +7 (727) 123-45-67</a></li>
+        <li><a href="tel:+77271234567">📞 +7 701 827 33 33</a></li>
         <li><a href="mailto:hello@bobo.kz">✉️ hello@bobo.kz</a></li>
       </ul>
     </div>
   </div>
   <div class="footer-bottom">
-    <p>© 2024 Bobo Kindergarten. All rights reserved. Made with ❤️ for children.</p>
+    <p>© 2026 Bobo Kindergarten. All rights reserved. Made with ❤️ for children.</p>
     <div class="social-links">
-      <a href="#" class="social-btn" title="Instagram">📸</a>
-      <a href="#" class="social-btn" title="Facebook">👥</a>
-      <a href="#" class="social-btn" title="WhatsApp">💬</a>
-      <a href="#" class="social-btn" title="YouTube">▶️</a>
+      <a href="https://www.instagram.com/bobo_balabaqsha/?hl=en" class="social-btn" title="Instagram">📸</a>
+      <a href="https://api.whatsapp.com/send/?phone=77025816967&text&type=phone_number&app_absent=0&utm_source=ig" class="social-btn" title="WhatsApp">💬</a>
     </div>
   </div>
 </footer>
