@@ -108,13 +108,25 @@
 
   /* ── PROGRAMS ── */
   #programs { background: var(--light); }
-  .programs-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(220px, 1fr)); gap: 20px; }
-  .program-card { background: white; border-radius: var(--radius); padding: 20px; box-shadow: 0 4px 16px rgba(45,42,62,0.06); transition: all .25s; position: relative; overflow: hidden; }
-  .program-card::before { content: ''; position: absolute; top: 0; left: 0; right: 0; height: 4px; }
-  .program-card:hover { transform: translateY(-4px); box-shadow: 0 12px 30px rgba(45,42,62,0.10); }
-  .program-card .p-icon { width: 48px; height: 48px; border-radius: 14px; display: flex; align-items: center; justify-content: center; font-size: 1.4rem; margin-bottom: 14px; }
-  .program-card h3 { font-family: 'Quicksand', sans-serif; font-weight: 700; font-size: 1rem; margin-bottom: 8px; }
-  .program-card p { font-size: .85rem; color: var(--mid); line-height: 1.6; margin-bottom: 14px; }
+  .programs-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(220px, 1fr)); gap: 20px; max-width: 1200px; margin: 0 auto; }
+  .program-card { background: linear-gradient(180deg, #ffffff 0%, #FBFBFF 100%); border-radius: 26px; padding: 22px; box-shadow: 0 8px 30px rgba(45,42,62,0.06); transition: transform .28s ease, box-shadow .28s ease; position: relative; overflow: hidden; display: flex; flex-direction: column; }
+  .program-card::before { content: ''; position: absolute; top: 0; left: 0; right: 0; height: 5px; border-top-left-radius: 26px; border-top-right-radius: 26px; }
+  .program-card:hover { transform: translateY(-6px) scale(1.01); box-shadow: 0 20px 50px rgba(45,42,62,0.12); }
+  .program-card .p-icon { width: 56px; height: 56px; border-radius: 14px; display: flex; align-items: center; justify-content: center; font-size: 1.5rem; margin-bottom: 16px; box-shadow: 0 6px 18px rgba(86,100,140,0.08); }
+  .program-card .p-icon svg, .program-card .p-icon i { display: block; }
+  .program-card h3 { font-family: 'Quicksand', sans-serif; font-weight: 800; font-size: 1.05rem; margin-bottom: 8px; color: var(--dark); letter-spacing: 0.2px; }
+  .program-card p { font-size: .9rem; color: var(--mid); line-height: 1.6; margin-bottom: 14px; flex: 1; }
+  .program-meta { display: flex; gap: 10px; align-items: center; margin-top: 8px; }
+  .program-meta .p-age, .program-meta .p-teacher { font-size: .78rem; padding: 6px 10px; border-radius: 999px; background: rgba(45,42,62,0.04); font-weight: 700; }
+  .program-card .learn-btn { display: inline-flex; align-items: center; gap: 8px; margin-top: 14px; text-decoration: none; color: var(--rose); font-weight: 800; padding: 8px 12px; border-radius: 14px; border: 1px solid rgba(255,107,138,0.08); }
+
+  /* Slightly stronger accent colors for the p-icon depending on program type */
+  .p1 .p-icon { background: linear-gradient(135deg, rgba(79,195,247,0.18), rgba(86,197,150,0.06)); }
+  .p2 .p-icon { background: linear-gradient(135deg, rgba(86,197,150,0.18), rgba(79,195,247,0.04)); }
+  .p3 .p-icon { background: linear-gradient(135deg, rgba(255,184,48,0.18), rgba(255,255,255,0.02)); }
+  .p4 .p-icon { background: linear-gradient(135deg, rgba(255,107,138,0.18), rgba(167,139,250,0.03)); }
+  .p5 .p-icon { background: linear-gradient(135deg, rgba(167,139,250,0.18), rgba(255,179,138,0.03)); }
+  .p6 .p-icon { background: linear-gradient(135deg, rgba(255,179,138,0.18), rgba(79,195,247,0.03)); }
   .program-card .p-age { display: inline-flex; align-items: center; gap: 6px; font-size: .8rem; font-weight: 700; padding: 5px 12px; border-radius: 20px; }
   .program-card .p-teacher { display: inline-flex; align-items: center; gap: 6px; font-size: .8rem; font-weight: 700; padding: 5px 12px; border-radius: 20px; }
   .p1::before { background: var(--sky); }
