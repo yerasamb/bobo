@@ -1,7 +1,7 @@
 const translations = {
   kk: {
     about: 'Біз туралы',
-    programs: 'Бағдарламалар',
+    programs: 'Топтар',
     subjects: 'Пәндер',
     schedule: 'Кесте',
     teachers: 'Мұғалімдер',
@@ -18,7 +18,7 @@ const translations = {
   },
   ru: {
     about: 'О нас',
-    programs: 'Программы',
+    programs: 'Группы',
     subjects: 'Предметы',
     schedule: 'Расписание',
     teachers: 'Преподаватели',
