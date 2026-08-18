@@ -276,11 +276,14 @@
   .event-banner::before { content: ''; position: absolute; inset: 0; opacity: .35; }
   .event-body { padding: 24px; flex: 1; display: flex; flex-direction: column; }
   .event-date-badge { display: inline-flex; align-items: center; gap: 8px; font-size: .8rem; font-weight: 700; padding: 4px 12px; border-radius: 20px; margin-bottom: 12px; }
-  .event-body h3 { font-family: 'Quicksand', sans-serif; font-weight: 700; font-size: 1.05rem; margin-bottom: 8px; }
+  .event-body h3 { font-family: 'Quicksand', sans-serif; font-weight: 700; font-size: 1.05rem; margin-bottom: 8px; text-align: center;}
   .event-body p { font-size: .87rem; color: var(--mid); line-height: 1.6; flex: 1; }
   .event-footer { padding: 0 24px 24px; }
   .event-link { font-size: .85rem; font-weight: 700; color: var(--rose); text-decoration: none; display: inline-flex; align-items: center; gap: 4px; }
   .event-link:hover { gap: 8px; }
+  .choose-event-type { display: flex; justify-content: center; gap: 10px; margin: -22px auto 32px; }
+.event-type-btn { border: 2px solid rgba(45,42,62,.1); border-radius: 999px; padding: 9px 16px; background: white; color: var(--mid); cursor: pointer; font: inherit; font-size: .86rem; font-weight: 700; transition: all .2s; }
+.event-type-btn:hover, .event-type-btn.active { border-color: var(--rose); background: var(--rose); color: white; box-shadow: 0 5px 14px rgba(255,107,138,.25); }
 
   /* ── TESTIMONIALS ── */
   #testimonials { background: white; }
@@ -294,17 +297,6 @@
   .testi-info h4 { font-weight: 700; font-size: .95rem; }
   .testi-info span { font-size: .8rem; color: var(--mid); }
   .stars { color: var(--sun); font-size: 1rem; margin-bottom: 14px; }
-
-  /* ── FAQ ── */
-  #faq { background: var(--light); }
-  .faq-wrap { max-width: 740px; margin: 0 auto; }
-  .faq-item { background: white; border-radius: 16px; margin-bottom: 12px; overflow: hidden; box-shadow: 0 2px 12px rgba(45,42,62,0.05); }
-  .faq-q { padding: 20px 24px; display: flex; justify-content: space-between; align-items: center; cursor: pointer; font-weight: 700; font-size: .97rem; gap: 12px; }
-  .faq-q .toggle { width: 30px; height: 30px; border-radius: 50%; background: var(--light); display: flex; align-items: center; justify-content: center; font-size: 1.1rem; flex-shrink: 0; transition: all .25s; }
-  .faq-item.open .faq-q .toggle { background: var(--rose); color: white; transform: rotate(45deg); }
-  .faq-a { max-height: 0; overflow: hidden; transition: max-height .35s ease; }
-  .faq-a-inner { padding: 0 24px 20px; font-size: .92rem; color: var(--mid); line-height: 1.7; }
-  .faq-item.open .faq-a { max-height: 300px; }
 
   /* ── FOOTER ── */
   footer { background: var(--dark); color: rgba(255,255,255,0.7); padding: 60px 5vw 32px; }
