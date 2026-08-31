@@ -1,18 +1,29 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Bobo Kindergarten</title>
-<link rel = "stylesheet" href="style.css">
-<link href="https://fonts.googleapis.com/css2?family=Quicksand:wght@400;600;700&display=swap" rel="stylesheet"></head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <title>Bobo Kindergarten</title>
+
+  <link rel="stylesheet" href="style.css">
+
+  <link
+    href="https://fonts.googleapis.com/css2?family=Quicksand:wght@400;600;700&display=swap"
+    rel="stylesheet"
+  >
+</head>
+
 <body>
-<!-- NAV -->
+
+<!-- ==================== NAVIGATION ==================== -->
 <nav id="navbar">
-  <a href="#" class="nav-logo">
+
+  <a href="#home" class="nav-logo">
     <div class="logo-icon">⭐</div>
     <span>Bobo Kindergarten</span>
   </a>
+
   <div class="nav-links" id="navLinks">
     <a href="#about" data-i18n="about">About</a>
     <a href="#programs" data-i18n="programs">Groups</a>
@@ -23,591 +34,1709 @@
     <a href="log.html" class="nav-portal" data-i18n="login">Child's food</a>
     <a href="#events" data-i18n="events">Events</a>
   </div>
+
   <div class="lang-switcher" aria-label="Language selector">
     <button class="lang-btn active" data-lang="kk" type="button">KZ</button>
     <button class="lang-btn" data-lang="ru" type="button">RU</button>
     <button class="lang-btn" data-lang="en" type="button">EN</button>
   </div>
-  <div class="hamburger" id="hamburger" onclick="toggleMenu()">
-    <span></span><span></span><span></span>
+
+  <div
+    class="hamburger"
+    id="hamburger"
+    onclick="toggleMenu()"
+    aria-label="Open navigation menu"
+    role="button"
+    tabindex="0"
+  >
+    <span></span>
+    <span></span>
+    <span></span>
   </div>
+
 </nav>
 
-<!-- HERO -->
+
+<!-- ==================== HERO ==================== -->
 <section class="hero" id="home">
+
   <div class="hero-text">
-    <h1 data-i18n-html="heroTitle">Where Every Child <em>Shines</em> &amp; Grows</h1>
-    <p data-i18n="heroText">A nurturing, joyful environment where curious minds blossom. We blend play-based learning with structured development to give every child the best start in life.</p>
+
+    <h1 data-i18n-html="heroTitle">
+      Where Every Child <em>Shines</em> &amp; Grows
+    </h1>
+
+    <p data-i18n="heroText">
+      A nurturing, joyful environment where curious minds blossom.
+      We blend play-based learning with structured development to give
+      every child the best start in life.
+    </p>
+
     <div class="hero-btns">
-      <a href="log.html" class="btn-secondary" data-i18n="heroBtn">👩‍🍳 Child's food</a>
+      <a href="log.html" class="btn-secondary" data-i18n="heroBtn">
+        👩‍🍳 Child's food
+      </a>
     </div>
+
     <div class="hero-stats">
-      <div class="stat"><span class="stat-num">7+</span><span class="stat-label" data-i18n="stat1">Years of Experience</span></div>
-      <div class="stat"><span class="stat-num">340+</span><span class="stat-label" data-i18n="stat2">Happy Graduates</span></div>
-      <div class="stat"><span class="stat-num">18</span><span class="stat-label" data-i18n="stat3">Expert Teachers</span></div>
-      <div class="stat"><span class="stat-num">4.7★</span><span class="stat-label" data-i18n="stat4">Parent Rating</span></div>
+
+      <div class="stat">
+        <span class="stat-num">7+</span>
+        <span class="stat-label" data-i18n="stat1">
+          Years of Experience
+        </span>
+      </div>
+
+      <div class="stat">
+        <span class="stat-num">340+</span>
+        <span class="stat-label" data-i18n="stat2">
+          Happy Graduates
+        </span>
+      </div>
+
+      <div class="stat">
+        <span class="stat-num">18</span>
+        <span class="stat-label" data-i18n="stat3">
+          Expert Teachers
+        </span>
+      </div>
+
+      <div class="stat">
+        <span class="stat-num">5.0★</span>
+        <span class="stat-label" data-i18n="stat4">
+          Parent Rating
+        </span>
+      </div>
+
     </div>
   </div>
+
+
   <div class="hero-visual">
+
     <div class="hero-card-wrap">
+
       <div class="hero-main-card">
+
         <div class="hero-emoji-grid">
+
           <div class="hero-emoji" style="background:#FFF0C8">🎨</div>
           <div class="hero-emoji" style="background:#E0F7FF">📚</div>
           <div class="hero-emoji" style="background:#FFE8EF">🎵</div>
           <div class="hero-emoji" style="background:#D8F0E8">🌱</div>
           <div class="hero-emoji" style="background:#F0EEFF">🧩</div>
           <div class="hero-emoji" style="background:#FFF3E8">⚽</div>
+
         </div>
+
       </div>
+
+
       <div class="float-badge top-right">
+
         <span style="font-size:1.3rem">🏆</span>
-        <span><b>Award Winning</b><br><span style="font-weight:400;color:var(--mid)">Best Kindergarten 2023</span></span>
+
+        <span>
+          <b>Award Winning</b>
+          <br>
+          <span style="font-weight:400;color:var(--mid)">
+            Best Kindergarten 2023
+          </span>
+        </span>
+
       </div>
+
+
       <div class="float-badge bottom-left">
-        <div class="badge-dot" style="background:var(--grass)"></div>
-        <span><b>Safe & Certified</b> Environment</span>
+
+        <div
+          class="badge-dot"
+          style="background:var(--grass)"
+        ></div>
+
+        <span>
+          <b>Safe &amp; Certified</b> Environment
+        </span>
+
       </div>
+
     </div>
+
   </div>
+
 </section>
 
-<!-- ABOUT -->
+
+<!-- ==================== ABOUT ==================== -->
 <section id="about">
+
   <div class="about-grid reveal">
+
     <div class="about-img-stack">
-      <div class="about-img-box main">🧒</div>
+
+      <div class="about-img-box main">
+
+        <video
+          controls
+          preload="metadata"
+          poster="images/about-poster.jpg"
+        >
+          <source src="videos/pp.mp4" type="video/mp4">
+          Your browser does not support video playback.
+        </video>
+
+      </div>
+
       <div class="about-img-box accent">🌈</div>
+
       <div class="about-year">
         <div class="num">7</div>
         <div class="lbl">Years of Joy</div>
       </div>
+
     </div>
+
+
     <div>
-      <div class="section-tag" style="background:rgba(86,197,150,0.12);color:var(--grass)">🌱 About Us</div>
-      <h2 class="section-title">A Place Your Child Will <em style="color:var(--rose);font-style:normal">Love</em> Every Day</h2>
-      <p class="section-sub">Founded in 2019, Bobo Kindergarten has been a beacon of excellence in early childhood education. Our philosophy centers on holistic development — nurturing cognitive, emotional, social, and physical growth.</p>
+
+      <div
+        class="section-tag"
+        style="background:rgba(86,197,150,0.12);color:var(--grass)"
+      >
+        🌱 About Us
+      </div>
+
+      <h2 class="section-title">
+        A Place Your Child Will
+        <em style="color:var(--rose);font-style:normal">
+          Love
+        </em>
+        Every Day
+      </h2>
+
+      <p class="section-sub">
+        Founded in 2019, Bobo Kindergarten has been a beacon of excellence
+        in early childhood education. Our philosophy centers on holistic
+        development — nurturing cognitive, emotional, social, and physical growth.
+      </p>
+
+
       <div class="about-cards">
+
         <div class="about-card">
           <div class="icon">🏡</div>
-          <h4>Quality and quantity</h4>
-          <p>Neuro-exercise,Robotics,Salt cave,Choreography,Karate,Group speech therapy,Fairy tale therapy,Art therapy,Sensory integration,English,Online camera</p>
+          <h4>Quality and Quantity</h4>
+          <p>
+            Neuro-exercise, Robotics, Salt Cave, Choreography, Karate,
+            Group Speech Therapy, Fairy Tale Therapy, Art Therapy,
+            Sensory Integration, English, and Online Camera.
+          </p>
         </div>
+
+
         <div class="about-card">
           <div class="icon">🎯</div>
           <h4>Curriculum</h4>
-          <p>International standards–based curriculum blending play, creativity, and structured learning.</p>
+          <p>
+            International standards-based curriculum blending play,
+            creativity, and structured learning.
+          </p>
         </div>
+
+
         <div class="about-card">
           <div class="icon">👨‍👩‍👧</div>
           <h4>Family Involvement</h4>
-          <p>Regular parent updates, open-day events, and family workshops to stay connected.</p>
+          <p>
+            Regular parent updates, open-day events, and family workshops
+            to stay connected.
+          </p>
         </div>
+
+
         <div class="about-card">
-          <div class="icon">🌍</div>
-          <h4>Multilingual</h4>
-          <p>English, Kazakh, and Russian instruction — giving children a trilingual advantage from day one.</p>
+          <div class="icon">😋</div>
+          <h4>Healthy Eating</h4>
+          <p>
+            Nutritious and balanced meals help children grow healthy,
+            happy, and active.
+          </p>
         </div>
+
       </div>
+
     </div>
+
   </div>
+
 </section>
 
-<!-- PROGRAMS -->
+
+<!-- ==================== PROGRAMS / GROUPS ==================== -->
 <section id="programs">
+
   <div class="center reveal">
-    <div class="section-tag" style="background:rgba(79,195,247,0.12);color:#0288D1">🎨 What We Offer</div>
-    <h2 class="section-title">Our Learning Programs</h2>
-    <p class="section-sub">Each program is carefully designed to match the developmental stage of your child, making learning a joyful adventure.</p>
+
+    <div
+      class="section-tag"
+      style="background:rgba(79,195,247,0.12);color:#0288D1"
+    >
+      🎨 What We Offer
+    </div>
+
+    <h2 class="section-title">
+      Our Learning Programs
+    </h2>
+
+    <p class="section-sub">
+      Each program is carefully designed to match the developmental stage
+      of your child, making learning a joyful adventure.
+    </p>
+
   </div>
+
+
   <div class="programs-grid reveal">
+
     <div class="program-card p1">
       <div class="p-icon">🐣</div>
       <h3>Kulynshak</h3>
       <span class="p-teacher">Kuralai and Bakyt</span>
       <span class="p-age">👶 Ages 1.5+</span>
     </div>
+
+
     <div class="program-card p2">
       <div class="p-icon">🧸</div>
       <h3>Baldyrgan</h3>
-     <span class="p-teacher">Ulbosun and Lyazzat</span>
-      <span class="p-age">🧒 Ages 1,5+ </span>
+      <span class="p-teacher">Ulbosun and Lyazzat</span>
+      <span class="p-age">🧒 Ages 1.5+</span>
     </div>
+
+
     <div class="program-card p3">
       <div class="p-icon">🎨</div>
       <h3>Baldauren</h3>
       <span class="p-teacher">Arailym</span>
-      <span class="p-age">👦 Ages 3+ </span>
+      <span class="p-age">👦 Ages 3+</span>
     </div>
+
+
     <div class="program-card p4">
       <div class="p-icon">⭐</div>
       <h3>Zhuldyz</h3>
       <span class="p-teacher">Arai and Sandugash</span>
-      <span class="p-age">📖 Ages 3,5+ </span>
+      <span class="p-age">📖 Ages 3.5+</span>
     </div>
+
+
     <div class="program-card p5">
       <div class="p-icon">🧠</div>
       <h3>Baiterek</h3>
-      <span class="p-teacher">Gulmira and Dinara</span>
-      <span class="p-age">🔬 Ages 3,5-4,5</span>
+      <span class="p-teacher">Gulmira</span>
+      <span class="p-age">🔬 Ages 3.5–4.5</span>
     </div>
+
+
     <div class="program-card p6">
       <div class="p-icon">🦅</div>
       <h3>Kyran</h3>
       <span class="p-teacher">Bayan and Marzhan</span>
-      <span class="p-age">🪽 Ages 4-5</span>
+      <span class="p-age">🪽 Ages 4–5</span>
     </div>
+
+
     <div class="program-card p7">
       <div class="p-icon">🔥</div>
       <h3>Zhalyn</h3>
       <span class="p-teacher">Zhanar and Marzhan</span>
-      <span class="p-age">🌇 Ages 5+ </span>
+      <span class="p-age">🌇 Ages 5+</span>
     </div>
+
   </div>
+
 </section>
 
-<!-- SUBJECTS -->
+
+<!-- ==================== SUBJECTS ==================== -->
 <section id="subjects">
+
   <div class="center reveal">
-    <div class="section-tag" style="background:rgba(86,197,150,0.12);color:var(--grass)">📚 Curriculum</div>
-    <h2 class="section-title">Subjects We Teach</h2>
-    <p class="section-sub">Our comprehensive curriculum covers all developmental domains through play-based and structured learning.</p>
+
+    <div
+      class="section-tag"
+      style="background:rgba(86,197,150,0.12);color:var(--grass)"
+    >
+      📚 Curriculum
+    </div>
+
+    <h2 class="section-title">
+      Subjects We Teach
+    </h2>
+
+    <p class="section-sub">
+      Our comprehensive curriculum covers all developmental domains
+      through play-based and structured learning.
+    </p>
+
   </div>
+
+
   <div class="subjects-grid reveal">
+
     <div class="subject-card s1">
       <div class="s-icon">🧠</div>
       <h3>Neuro Development</h3>
-      <p>A set of activities designed to support children’s attention, memory, thinking, coordination and cognitive development.
-</p>
+      <p>
+        A set of activities designed to support children’s attention,
+        memory, thinking, coordination, and cognitive development.
+      </p>
     </div>
+
+
     <div class="subject-card s2">
       <div class="s-icon">🧂</div>
       <h3>Salt Room</h3>
-      <p>A comfortable space for relaxation and quiet activities in a salt environment, where children can rest and enjoy calm play.</p>
+      <p>
+        A comfortable space for relaxation and quiet activities in a
+        salt environment, where children can rest and enjoy calm play.
+      </p>
     </div>
+
+
     <div class="subject-card s3">
       <div class="s-icon">📖</div>
       <h3>Book Therapy</h3>
-      <p>Using books and stories to help children understand emotions, develop imagination and build positive social and communication skills.
-</p>
+      <p>
+        Using books and stories to help children understand emotions,
+        develop imagination, and build positive social and communication skills.
+      </p>
     </div>
+
+
     <div class="subject-card s4">
       <div class="s-icon">🥋</div>
       <h3>Karate</h3>
-      <p>A sports activity that supports physical development, coordination, agility, discipline, concentration and self-control.
-</p>
+      <p>
+        A sports activity that supports physical development,
+        coordination, agility, discipline, concentration, and self-control.
+      </p>
     </div>
+
+
     <div class="subject-card s5">
       <div class="s-icon">🩰</div>
       <h3>Choreography</h3>
-      <p>Music and movement activities that help develop rhythm, flexibility, coordination, confidence and creativity.
-</p>
+      <p>
+        Music and movement activities that help develop rhythm,
+        flexibility, coordination, confidence, and creativity.
+      </p>
     </div>
+
+
     <div class="subject-card s6">
       <div class="s-icon">🗣️</div>
       <h3>Group Speech Therapy</h3>
-      <p>Group sessions focused on speech development, correct pronunciation, vocabulary expansion and communication skills.
-</p>
+      <p>
+        Group sessions focused on speech development, correct pronunciation,
+        vocabulary expansion, and communication skills.
+      </p>
     </div>
+
+
     <div class="subject-card s7">
       <div class="s-icon">🤖</div>
       <h3>Robotics and STEAM</h3>
-      <p>Engaging activities combining construction, technology, engineering and creativity. They encourage logical, spatial and creative thinking.
-</p>
+      <p>
+        Engaging activities combining construction, technology,
+        engineering, and creativity. They encourage logical,
+        spatial, and creative thinking.
+      </p>
     </div>
+
+
     <div class="subject-card s8">
       <div class="s-icon">🎴</div>
       <h3>Glenn Doman Method</h3>
-      <p>An early-development approach focused on stimulating children’s cognitive abilities through visual materials and structured activiti</p>
+      <p>
+        An early-development approach focused on stimulating children’s
+        cognitive abilities through visual materials and structured activities.
+      </p>
     </div>
+
+
     <div class="subject-card s9">
       <div class="s-icon">❤️</div>
       <h3>Sensory Integration</h3>
-      <p>Activities designed to help children process sensory information and improve body awareness, balance and movement coordination.
-</p>
+      <p>
+        Activities designed to help children process sensory information
+        and improve body awareness, balance, and movement coordination.
+      </p>
     </div>
+
+
     <div class="subject-card s10">
       <div class="s-icon">🎨</div>
       <h3>Art Therapy</h3>
-      <p>Creative activities such as drawing, modeling and working with colors that encourage emotional expression, imagination and creativity.</p>
+      <p>
+        Creative activities such as drawing, modeling, and working with
+        colors that encourage emotional expression, imagination, and creativity.
+      </p>
     </div>
+
   </div>
+
 </section>
 
-<!-- SCHEDULE & FEES -->
+
+<!-- ==================== SCHEDULE ==================== -->
 <section id="schedule">
+
   <div class="center reveal" style="margin-bottom:48px">
-    <div class="section-tag" style="background:rgba(255,184,48,0.12);color:#B26A00">⏰ Daily Routine</div>
-    <h2 class="section-title">Daily Schedule</h2>
-    <p class="section-sub">A balanced, structured day designed to maximise learning, play, and rest.</p>
-  </div>
-  <div class="schedule-group-picker reveal" aria-label="Choose a group schedule">
-    <button class="schedule-group-btn active" data-schedule-group="Kulynshak" type="button">Kulynshak</button>
-    <button class="schedule-group-btn" data-schedule-group="Baldyrgan" type="button">Baldyrgan</button>
-    <button class="schedule-group-btn" data-schedule-group="Baldauren" type="button">Baldauren</button>
-    <button class="schedule-group-btn" data-schedule-group="Zhuldyz" type="button">Zhuldyz</button>
-    <button class="schedule-group-btn" data-schedule-group="Baiterek" type="button">Baiterek</button>
-    <button class="schedule-group-btn" data-schedule-group="Kyran" type="button">Kyran</button>
-    <button class="schedule-group-btn" data-schedule-group="Zhalyn" type="button">Zhalyn</button>
-  </div>
-  <div class="schedule-wrap reveal">
-    <div>
-      <div class="schedule-group-heading">
-        <h3 id="scheduleGroupTitle">Kulynshak Daily Schedule</h3>
-        <p id="scheduleTemplateNote">Sample schedule — details will be confirmed by the group teacher.</p>
-      </div>
-      <div class="schedule-list" id="scheduleList">
-      <div class="schedule-item active"><span class="time">7:30–8:30</span><div class="s-dot" style="background:var(--sky)"></div><div class="s-info"><h4>Morning Arrival & Free Play</h4><p>Drop-off, greetings, unstructured exploration</p></div></div>
-      <div class="schedule-item"><span class="time">8:30–9:00</span><div class="s-dot" style="background:var(--grass)"></div><div class="s-info"><h4>Morning Circle & Calendar</h4><p>Songs, weather, news, mindfulness</p></div></div>
-      <div class="schedule-item"><span class="time">9:00–10:00</span><div class="s-dot" style="background:var(--rose)"></div><div class="s-info"><h4>Learning Centres</h4><p>Literacy, numeracy, STEM stations</p></div></div>
-      <div class="schedule-item"><span class="time">10:00–10:30</span><div class="s-dot" style="background:var(--sun)"></div><div class="s-info"><h4>Snack & Rest</h4><p>Healthy snack provided by the academy</p></div></div>
-      <div class="schedule-item"><span class="time">10:30–11:30</span><div class="s-dot" style="background:var(--lavender)"></div><div class="s-info"><h4>Outdoor Play & PE</h4><p>Physical activity, sports, playground</p></div></div>
-      <div class="schedule-item"><span class="time">11:30–12:30</span><div class="s-dot" style="background:var(--peach)"></div><div class="s-info"><h4>Arts, Music & Crafts</h4><p>Creative expression and projects</p></div></div>
-      <div class="schedule-item"><span class="time">12:30–1:30</span><div class="s-dot" style="background:var(--grass)"></div><div class="s-info"><h4>Lunch & Afternoon Rest</h4><p>Nutritious lunch, nap for younger kids</p></div></div>
-      <div class="schedule-item"><span class="time">1:30–3:00</span><div class="s-dot" style="background:var(--sky)"></div><div class="s-info"><h4>Language & Story Time</h4><p>Trilingual reading, storytelling</p></div></div>
-      <div class="schedule-item"><span class="time">3:00–3:30</span><div class="s-dot" style="background:var(--rose)"></div><div class="s-info"><h4>Pick-Up / After-Care Begins</h4><p>Regular pick-up or extended care</p></div></div>
-      </div>
+
+    <div
+      class="section-tag"
+      style="background:rgba(255,184,48,0.12);color:#B26A00"
+    >
+      ⏰ Daily Routine
     </div>
+
+    <h2 class="section-title">
+      Daily Schedule
+    </h2>
+
+    <p class="section-sub">
+      A balanced, structured day designed to maximise learning,
+      play, and rest.
+    </p>
+
   </div>
+
+
+  <div
+    class="schedule-group-picker reveal"
+    aria-label="Choose a group schedule"
+  >
+
+    <button
+      class="schedule-group-btn active"
+      data-schedule-group="Kulynshak"
+      type="button"
+    >
+      Kulynshak
+    </button>
+
+    <button
+      class="schedule-group-btn"
+      data-schedule-group="Baldyrgan"
+      type="button"
+    >
+      Baldyrgan
+    </button>
+
+    <button
+      class="schedule-group-btn"
+      data-schedule-group="Baldauren"
+      type="button"
+    >
+      Baldauren
+    </button>
+
+    <button
+      class="schedule-group-btn"
+      data-schedule-group="Zhuldyz"
+      type="button"
+    >
+      Zhuldyz
+    </button>
+
+    <button
+      class="schedule-group-btn"
+      data-schedule-group="Baiterek"
+      type="button"
+    >
+      Baiterek
+    </button>
+
+    <button
+      class="schedule-group-btn"
+      data-schedule-group="Kyran"
+      type="button"
+    >
+      Kyran
+    </button>
+
+    <button
+      class="schedule-group-btn"
+      data-schedule-group="Zhalyn"
+      type="button"
+    >
+      Zhalyn
+    </button>
+
+  </div>
+
+
+  <div class="schedule-wrap reveal">
+
+    <div>
+
+      <div class="schedule-group-heading">
+
+        <h3 id="scheduleGroupTitle">
+          Kulynshak Daily Schedule
+        </h3>
+
+        <p id="scheduleTemplateNote">
+          Sample schedule — details will be confirmed by the group teacher.
+        </p>
+
+      </div>
+
+
+      <div class="schedule-list" id="scheduleList">
+
+        <div class="schedule-item active">
+
+          <span class="time">7:30–8:30</span>
+
+          <div
+            class="s-dot"
+            style="background:var(--sky)"
+          ></div>
+
+          <div class="s-info">
+            <h4>Morning Arrival &amp; Free Play</h4>
+            <p>Drop-off, greetings, unstructured exploration</p>
+          </div>
+
+        </div>
+
+
+        <div class="schedule-item">
+
+          <span class="time">8:30–9:00</span>
+
+          <div
+            class="s-dot"
+            style="background:var(--grass)"
+          ></div>
+
+          <div class="s-info">
+            <h4>Morning Circle &amp; Calendar</h4>
+            <p>Songs, weather, news, mindfulness</p>
+          </div>
+
+        </div>
+
+
+        <div class="schedule-item">
+
+          <span class="time">9:00–10:00</span>
+
+          <div
+            class="s-dot"
+            style="background:var(--rose)"
+          ></div>
+
+          <div class="s-info">
+            <h4>Learning Centres</h4>
+            <p>Literacy, numeracy, STEM stations</p>
+          </div>
+
+        </div>
+
+
+        <div class="schedule-item">
+
+          <span class="time">10:00–10:30</span>
+
+          <div
+            class="s-dot"
+            style="background:var(--sun)"
+          ></div>
+
+          <div class="s-info">
+            <h4>Snack &amp; Rest</h4>
+            <p>Healthy snack provided by the kindergarten</p>
+          </div>
+
+        </div>
+
+
+        <div class="schedule-item">
+
+          <span class="time">10:30–11:30</span>
+
+          <div
+            class="s-dot"
+            style="background:var(--lavender)"
+          ></div>
+
+          <div class="s-info">
+            <h4>Outdoor Play &amp; PE</h4>
+            <p>Physical activity, sports, playground</p>
+          </div>
+
+        </div>
+
+
+        <div class="schedule-item">
+
+          <span class="time">11:30–12:30</span>
+
+          <div
+            class="s-dot"
+            style="background:var(--peach)"
+          ></div>
+
+          <div class="s-info">
+            <h4>Arts, Music &amp; Crafts</h4>
+            <p>Creative expression and projects</p>
+          </div>
+
+        </div>
+
+
+        <div class="schedule-item">
+
+          <span class="time">12:30–1:30</span>
+
+          <div
+            class="s-dot"
+            style="background:var(--grass)"
+          ></div>
+
+          <div class="s-info">
+            <h4>Lunch &amp; Afternoon Rest</h4>
+            <p>Nutritious lunch, nap for younger kids</p>
+          </div>
+
+        </div>
+
+
+        <div class="schedule-item">
+
+          <span class="time">1:30–3:00</span>
+
+          <div
+            class="s-dot"
+            style="background:var(--sky)"
+          ></div>
+
+          <div class="s-info">
+            <h4>Language &amp; Story Time</h4>
+            <p>Trilingual reading, storytelling</p>
+          </div>
+
+        </div>
+
+
+        <div class="schedule-item">
+
+          <span class="time">3:00–3:30</span>
+
+          <div
+            class="s-dot"
+            style="background:var(--rose)"
+          ></div>
+
+          <div class="s-info">
+            <h4>Pick-Up / After-Care Begins</h4>
+            <p>Regular pick-up or extended care</p>
+          </div>
+
+        </div>
+
+      </div>
+
+    </div>
+
+  </div>
+
 </section>
 
-<!-- TEACHERS -->
+
+<!-- ==================== TEACHERS ==================== -->
 <section id="teachers">
+
   <div class="center reveal">
-    <div class="section-tag" style="background:rgba(167,139,250,0.12);color:#5B21B6">👩‍🏫 Our Team</div>
-    <h2 class="section-title">Meet Our Wonderful Teachers</h2>
-    <p class="section-sub">Qualified, passionate educators dedicated to nurturing each child's unique potential with warmth and expertise.</p>
+
+    <div
+      class="section-tag"
+      style="background:rgba(167,139,250,0.12);color:#5B21B6"
+    >
+      👩‍🏫 Our Team
+    </div>
+
+    <h2 class="section-title">
+      Meet Our Wonderful Teachers
+    </h2>
+
+    <p class="section-sub">
+      Qualified, passionate educators dedicated to nurturing each child's
+      unique potential with warmth and expertise.
+    </p>
+
   </div>
+
+
   <div class="teachers-grid reveal">
+
+
     <div class="teacher-card t1">
       <div class="teacher-avatar teacher-avatar-large">
-        <img src="images/SauleBaimakhanova.jpg" alt="Saule Baimakhanova" class="teacher-photo" />
+        <img
+          src="images/SauleBaimakhanova.jpg"
+          alt="Saule Baimakhanova"
+          class="teacher-photo"
+        >
       </div>
       <h3>Saule Baimakhanova</h3>
       <div class="t-role">Founder</div>
     </div>
+
+
     <div class="teacher-card t2">
       <div class="teacher-avatar teacher-avatar-large">
-        <img src="images/asel.jpg" alt="David Kim" class="teacher-photo" />
+        <img
+          src="images/asel.jpg"
+          alt="Asem Beibytbekovna"
+          class="teacher-photo"
+        >
       </div>
       <h3>Asem Beibytbekovna</h3>
       <div class="t-role">Manager</div>
     </div>
+
+
     <div class="teacher-card t3">
       <div class="teacher-avatar teacher-avatar-large">
-        <img src="images/gulnar.jpg" alt="Aisha Nurova" class="teacher-photo" />
+        <img
+          src="images/gulnar.jpg"
+          alt="Karaulova Gulnar"
+          class="teacher-photo"
+        >
       </div>
       <h3>Karaulova Gulnar</h3>
       <div class="t-role">Cook</div>
     </div>
+
+
     <div class="teacher-card t4">
       <div class="teacher-avatar teacher-avatar-large">
-        <img src="images/leila.jpg" alt="Maria Santos" class="teacher-photo" />
+        <img
+          src="images/leila.jpg"
+          alt="Saimuha Leila"
+          class="teacher-photo"
+        >
       </div>
       <h3>Saimuha Leila</h3>
       <div class="t-role">Doctor</div>
     </div>
+
+
     <div class="teacher-card t5">
       <div class="teacher-avatar teacher-avatar-large">
-        <img src="images/zhanar.jpg" alt="David Kim" class="teacher-photo" />
+        <img
+          src="images/zhanar.jpg"
+          alt="Yeshova Zhanar"
+          class="teacher-photo"
+        >
       </div>
       <h3>Yeshova Zhanar</h3>
-      <div class="t-role">The childcare worker for group Zhalyn</div>
+      <div class="t-role">
+        The childcare worker for group Zhalyn
+      </div>
     </div>
+
+
     <div class="teacher-card t6">
       <div class="teacher-avatar teacher-avatar-large">
-        <img src="images/bayan.jpg" alt="David Kim" class="teacher-photo" />
+        <img
+          src="images/bayan.jpg"
+          alt="Abdibay Bayan"
+          class="teacher-photo"
+        >
       </div>
       <h3>Abdibay Bayan</h3>
-      <div class="t-role">The childcare worker for group Kyran</div>
+      <div class="t-role">
+        The childcare worker for group Kyran
+      </div>
     </div>
+
+
     <div class="teacher-card t7">
       <div class="teacher-avatar teacher-avatar-large">
-        <img src="images/gulmira.jpg" alt="David Kim" class="teacher-photo" />
+        <img
+          src="images/gulmira.jpg"
+          alt="Isabaeva Gulmira"
+          class="teacher-photo"
+        >
       </div>
       <h3>Isabaeva Gulmira</h3>
-      <div class="t-role">The childcare worker for group Baiterek</div>
+      <div class="t-role">
+        The childcare worker for group Baiterek
+      </div>
     </div>
+
+
     <div class="teacher-card t8">
       <div class="teacher-avatar teacher-avatar-large">
-        <img src="images/NurlankyzyArai.jpg" alt="David Kim" class="teacher-photo" />
+        <img
+          src="images/NurlankyzyArai.jpg"
+          alt="Nurlanova Arai"
+          class="teacher-photo"
+        >
       </div>
       <h3>Nurlanova Arai</h3>
-      <div class="t-role">The childcare worker for group Zhuldyz</div>
+      <div class="t-role">
+        The childcare worker for group Zhuldyz
+      </div>
     </div>
+
+
     <div class="teacher-card t9">
       <div class="teacher-avatar teacher-avatar-large">
-        <img src="images/arailym.jpg" alt="David Kim" class="teacher-photo" />
+        <img
+          src="images/arailym.jpg"
+          alt="Smagul Arailym"
+          class="teacher-photo"
+        >
       </div>
       <h3>Smagul Arailym</h3>
-      <div class="t-role">The childcare worker for group Baldauren</div>
+      <div class="t-role">
+        The childcare worker for group Baldauren
+      </div>
     </div>
+
+
     <div class="teacher-card t10">
       <div class="teacher-avatar teacher-avatar-large">
-        <img src="images/ulbolsyn.jpg" alt="David Kim" class="teacher-photo" />
+        <img
+          src="images/ulbolsyn.jpg"
+          alt="Kozhakmet Ulbosyn"
+          class="teacher-photo"
+        >
       </div>
       <h3>Kozhakmet Ulbosyn</h3>
-      <div class="t-role">The childcare worker for group Baldyrgan</div>
+      <div class="t-role">
+        The childcare worker for group Baldyrgan
+      </div>
     </div>
+
+
     <div class="teacher-card t11">
       <div class="teacher-avatar teacher-avatar-large">
-        <img src="images/kuralai.jpg" alt="David Kim" class="teacher-photo" />
+        <img
+          src="images/kuralai.jpg"
+          alt="Askarova Kuralai"
+          class="teacher-photo"
+        >
       </div>
       <h3>Askarova Kuralai</h3>
-      <div class="t-role">The childcare worker for group Kulynshak</div>
+      <div class="t-role">
+        The childcare worker for group Kulynshak
+      </div>
     </div>
+
 
     <div class="teacher-card t12">
       <div class="teacher-avatar teacher-avatar-large">
-        <img src="images/marzhan.jpg" alt="David Kim" class="teacher-photo" />
+        <img
+          src="images/marzhan.jpg"
+          alt="Mukhamedkaly Marzhan"
+          class="teacher-photo"
+        >
       </div>
       <h3>Mukhamedkaly Marzhan</h3>
-      <div class="t-role">The nanny for Zhalyn and Kyran</div>
+      <div class="t-role">
+        The nanny for Zhalyn and Kyran
+      </div>
     </div>
-    
+
+
     <div class="teacher-card t14">
       <div class="teacher-avatar teacher-avatar-large">
-        <img src="images/sandugash.jpg" alt="David Kim" class="teacher-photo" />
+        <img
+          src="images/sandugash.jpg"
+          alt="Alimbetova Sandugash"
+          class="teacher-photo"
+        >
       </div>
       <h3>Alimbetova Sandugash</h3>
-      <div class="t-role">The nanny for Zhuldyz</div>
+      <div class="t-role">
+        The nanny for Zhuldyz
+      </div>
     </div>
+
+
     <div class="teacher-card t15">
       <div class="teacher-avatar teacher-avatar-large">
-        <img src="images/lazzat.jpg" alt="David Kim" class="teacher-photo" />
+        <img
+          src="images/lazzat.jpg"
+          alt="Shimakhanova Lyazzat"
+          class="teacher-photo"
+        >
       </div>
       <h3>Shimakhanova Lyazzat</h3>
-      <div class="t-role">The nanny for Baldyrgan</div>
+      <div class="t-role">
+        The nanny for Baldyrgan
+      </div>
     </div>
+
+
     <div class="teacher-card t16">
       <div class="teacher-avatar teacher-avatar-large">
-        <img src="images/bakyt.jpg" alt="David Kim" class="teacher-photo" />
+        <img
+          src="images/bakyt.jpg"
+          alt="Bakyt"
+          class="teacher-photo"
+        >
       </div>
       <h3>Bakyt</h3>
-      <div class="t-role">The nanny for Kulynzhak </div>
+      <div class="t-role">
+        The nanny for Kulynshak
+      </div>
     </div>
+
   </div>
+
 </section>
 
-<!-- GALLERY -->
+
+<!-- ==================== GALLERY ==================== -->
 <section id="gallery">
+
   <div class="center reveal">
-    <div class="section-tag" style="background:rgba(255,107,138,0.12);color:#C0224B">📸 Gallery</div>
-    <h2 class="section-title">Life at Bobo Kindergarten</h2>
-    <p class="section-sub">A glimpse into the joy, learning, and friendships that happen every day at our kindergarten.</p>
-  </div>
-  <div class="gallery-filters reveal">
-    <button class="gf-btn active" onclick="filterGallery(this,'all')">All</button>
-    <button class="gf-btn" onclick="filterGallery(this,'art')">🎨 Arts & Crafts</button>
-    <button class="gf-btn" onclick="filterGallery(this,'play')">⚽ Outdoor Play</button>
-    <button class="gf-btn" onclick="filterGallery(this,'learn')">📚 Learning</button>
-    <button class="gf-btn" onclick="filterGallery(this,'events')">🎉 Events</button>
-  </div>
-  <div class="gallery-grid reveal" id="galleryGrid">
-    <div class="gallery-item tall" style="background:linear-gradient(135deg,#FFE8EF,#FFC8D5)" data-cat="art"><span>🎨</span><div class="overlay"><span>Art Workshop</span></div></div>
-    <div class="gallery-item" style="background:linear-gradient(135deg,#E0F7FF,#B3E8FF)" data-cat="play"><span>⚽</span><div class="overlay"><span>Sports Day</span></div></div>
-    <div class="gallery-item" style="background:linear-gradient(135deg,#FFF3D0,#FFDF8A)" data-cat="learn"><span>📖</span><div class="overlay"><span>Story Time</span></div></div>
-    <div class="gallery-item" style="background:linear-gradient(135deg,#F0EEFF,#D8CCFF)" data-cat="events"><span>🎉</span><div class="overlay"><span>Graduation Day</span></div></div>
-      <div class="gallery-item wide" style="background:linear-gradient(135deg,#D8F0E8,#A8E6CC)" data-cat="learn"><span>🌱</span><div class="overlay"><span>Science Experiments</span></div></div>
-    <div class="gallery-item" style="background:linear-gradient(135deg,#FFE8D0,#FFD0A8)" data-cat="art"><span>🖌️</span><div class="overlay"><span>Painting Class</span></div></div>
-    <div class="gallery-item" style="background:linear-gradient(135deg,#FFD0D8,#FFB8C4)" data-cat="events"><span>🎵</span><div class="overlay"><span>Music Show</span></div></div>
-    <div class="gallery-item tall" style="background:linear-gradient(135deg,#D0E8FF,#A8D0FF)" data-cat="play"><span>🛝</span><div class="overlay"><span>Playground Fun</span></div></div>
-    <div class="gallery-item" style="background:linear-gradient(135deg,#E8FFD0,#C8F0A0)" data-cat="learn"><span>🔢</span><div class="overlay"><span>Math Games</span></div></div>
-    <div class="gallery-item" style="background:linear-gradient(135deg,#FFE8FF,#F0C8FF)" data-cat="art"><span>✂️</span><div class="overlay"><span>Craft Morning</span></div></div>
-  </div>
-</section>
 
-<!-- EVENTS -->
-<section id="events">
-  <div class="center reveal">
-    <div class="section-tag" style="background:rgba(255,184,48,0.12);color:#B26A00">📅 Events</div>
-    <h2 class="section-title">Upcoming Events</h2>
-    <p class="section-sub">Exciting activities, celebrations, and learning opportunities happening soon!</p>
-  </div>
-  <div class="choose-event-type">
-    <button class="event-type-btn active" data-event-type="events" type="button">Events</button>
-    <button class="event-type-btn" data-event-type="classHour" type="button">Class hour</button>
-</div>
-
-<div class="events-grid reveal" id="eventsPanel">
-  <div class="event-card">
-    <div class="event-banner" style="background:linear-gradient(135deg,#FFE8EF,#FFC8D5)"><span style="position:relative;z-index:1">🍁</span></div>
-    <div class="event-body">
-      <div class="event-date-badge" style="background:rgba(255,107,138,0.12);color:#C0224B"> October, 2026</div>
-      <h3>Autumn Ball</h3>
-      <p>The kindergarten was beautifully decorated with colorful autumn leaves, flowers, fruits, and seasonal decorations. Our little ones dressed up in lovely autumn-themed costumes and took part in a special celebration dedicated to the beauty and richness of the autumn season.</p>
+    <div
+      class="section-tag"
+      style="background:rgba(255,107,138,0.12);color:#C0224B"
+    >
+      📸 Gallery
     </div>
-    <div class="event-footer"><span class="event-link">Details coming soon</span></div>
-  </div>
-  <div class="event-card">
-    <div class="event-banner" style="background:linear-gradient(135deg,#E0F7FF,#B3E8FF)"><span style="position:relative;z-index:1">🎄</span></div>
-    <div class="event-body">
-      <div class="event-date-badge" style="background:rgba(79,195,247,0.12);color:#0288D1"> December, 2026</div>
-      <h3>New Year</h3>
-      <p>
-        Our kindergarten will celebrate the New Year with joy, music, dancing, fun games, and beautiful costumes. It will be a magical day full of smiles and wonderful memorie
-      </p>
-    </div>
-    <div class="event-footer"><span class="event-link">Details coming soon</span></div>
-  </div>
-  <div class="event-card">
-    <div class="event-banner" style="background:linear-gradient(135deg,#FFF3D0,#FFDF8A)"><span style="position:relative;z-index:1">🇰🇿</span></div>
-    <div class="event-body">
-      <div class="event-date-badge" style="background:rgba(255,184,48,0.12);color:#B26A00">April , 2026</div>
-      <h3>Nauryz</h3>
-      <p>
-        Our kindergarten will welcome Nauryz with a joyful celebration of spring, friendship, and Kazakh traditions. The children will enjoy traditional games, music, dancing, and a festive atmosphere.
-      </p>
-    </div>
-    <div class="event-footer"><span class="event-link">Details coming soon</span></div>
-  </div>
-</div>
 
-<div class="events-grid reveal" id="classHourPanel" style="display:none">
-  <div class="event-card">
-    <div class="event-banner" style="background:linear-gradient(135deg,#D8F0E8,#A8E6CC)"><span style="position:relative;z-index:1">🧠</span></div>
-    <div class="event-body">
-      <div class="event-date-badge" style="background:rgba(86,197,150,0.12);color:#1B8A59">01 September</div>
-      <h3>Day of Knowledge</h3>
-    </div>
+    <h2 class="section-title">
+      Life at Bobo Kindergarten
+    </h2>
+
+    <p class="section-sub">
+      A glimpse into the joy, learning, and friendships that happen
+      every day at our kindergarten.
+    </p>
+
   </div>
 
 
-  <div class="event-card">
-    <div class="event-banner" style="background:linear-gradient(135deg,#F0EEFF,#D8CCFF)"><span style="position:relative;z-index:1">🌍</span></div>
-    <div class="event-body">
-      <div class="event-date-badge" style="background:rgba(167,139,250,0.12);color:#5B21B6">05 September</div>
-      <h3>Day of Language</h3>
-    </div>
-  </div>
-
-
-  <div class="event-card">
-    <div class="event-banner" style="background:linear-gradient(135deg,#4682e9,#4682e9)"><span style="position:relative;z-index:1">🦅</span></div>
-    <div class="event-body">
-      <div class="event-date-badge" style="background:rgba(255,184,48,0.12);color:#5cb0ff">20-23 October</div>
-      <h3>Day of Republic</h3>
-    </div>
-  </div>
-
-  <div class="event-card">
-    <div class="event-banner" style="background:linear-gradient(135deg,#F0EEFF,#38afe7)"><span style="position:relative;z-index:1">🇰🇿</span></div>
-    <div class="event-body">
-      <div class="event-date-badge" style="background:rgba(167,139,250,0.12);color:#2732ff">08-11 December</div>
-      <h3>Independence Day</h3>
-    </div>
-  </div>
-
-  <div class="event-card">
-    <div class="event-banner" style="background:linear-gradient(135deg,#F0EEFF,#ecd90e)"><span style="position:relative;z-index:1">🫂</span></div>
-    <div class="event-body">
-      <div class="event-date-badge" style="background:rgba(167,139,250,0.12);color:#5B21B6">1 March 2027</div>
-      <h3>Thanksgiving Day</h3>
-    </div>
-  </div>
-
-</div>
-</section>
-
-<!-- TESTIMONIALS -->
-<section id="testimonials">
-  <div class="center reveal">
-    <div class="section-tag" style="background:rgba(86,197,150,0.12);color:var(--grass)">💬 Parent Reviews</div>
-    <h2 class="section-title">💬 Parent Reviews</h2>
-    <p class="section-sub">Our greatest achievement is happy children and satisfied parents.</p>
-  </div>
   
-  <div class="testimonials-grid reveal">
-    <a href="https://2gis.kz/reviews/70000001041697984/review/232477430" target="_blank" class="testi-link">
-      <div class="testi-card">
-        <div class="stars">★★★★★</div>
-        <div class="testi-quote">"</div>
-        <p>Өте жақсы балабақша! Сенімді,Таза әрі Тәрбиешілеріде мейірімді жақсы жандар
-Асем Бейбітбекқызына өте жақсы жан, алғысымызды айтамыз💕</p>
-        <div class="testi-author">
-          <div class="testi-avatar" style="background:#FFE8EF">👩</div>
-          <div class="testi-info"><h4>Аяжан Бидахметова</h4></div>
-        </div>
-        <div class="two-gis-badge">Read on 2GIS →</div>
-      </div>
-    </a>
 
-    <a href="https://2gis.kz/reviews/70000001041697984/review/232475782" target="_blank" class="testi-link">
-      <div class="testi-card">
-        <div class="stars">★★★★★</div>
-        <div class="testi-quote">"</div>
-        <p>Өте керемет балабақша, жаңа технология бойынша баланың қызығушылығын арттыратын қызықты жаттығулар жасалады. Қызымыз балабақшаға барамын деп асығып тұрады. Асем Бейбітбекқызы бастаған бұл ұжымға алғысым шексіз. Баламен тек жұмыс жасап қоймай, оларға өте мейірімді, өз аналарындай қарайтын тәрбиешілерге де мың алғыс. Жұмыстарыңыз өрге жүзе берсін. Асем апай еңбегіңіздің жемісін көріңіз! Әр балаға өз балаңыздай қарап жүрген мейірімділігіңізге шексіз ризамын! Рахмет!</p>
-        <div class="testi-author">
-          <div class="testi-avatar" style="background:#E0F7FF">👩</div>
-          <div class="testi-info"><h4>Назгуль Аубакирова</h4></div>
-        </div>
-        <div class="two-gis-badge">Read on 2GIS →</div>
-      </div>
-    </a>
 
-    <a href="https://2gis.kz/reviews/70000001041697984/review/211740841" target="_blank" class="testi-link">
-      <div class="testi-card">
-        <div class="stars">★★★★★</div>
-        <div class="testi-quote">"</div>
-        <p>Советую всем очень хороший Садик ,воспитатели очень хорошие ,вежливые ,трудолюбивые</p>
-        <div class="testi-author">
-          <div class="testi-avatar" style="background:#D8F0E8">👨</div>
-          <div class="testi-info"><h4>Zhasulan Omirzhan</h4><span>Частый гость<br>Отзыв подтверждён</span></div>
-        </div>
-        <div class="two-gis-badge">Read on 2GIS →</div>
-      </div>
-    </a>
+  <div class="gallery-grid reveal" id="galleryGrid">
+
+    <div
+      class="gallery-item tall"
+      data-cat="art"
+    >
+    <img
+    src="images/sad2.jpg"
+    >
+    </div>
+
+
+    <div
+      class="gallery-item tall"
+      data-cat="play"
+    >
+      <img
+      src="images/sad3.jpeg"
+      >
+    </div>
+
+
+
+
+    <div
+      class="gallery-item wide"
+      data-cat="learn"
+    >
+        <img
+        src="images/sad1.jpg"
+      
+        >
+    </div>
+
+
+    <div
+      class="gallery-item wide"
+      data-cat="art"
+    >
+     <img
+     src="images/sad5.jpeg"
+     >
+    </div>
+
+
+
+    <div
+      class="gallery-item tall"
+      data-cat="play"
+    >
+       <img
+      src="images/sad4.jpeg"
+      >
+    </div>
+
+
+    <div
+      class="gallery-item tall"
+      data-cat="learn"
+    >
+      <img
+      src="images/sad6.jpeg"
+      >
+    </div>
+
+
+   
+
   </div>
+
 </section>
 
 
-<!-- FOOTER -->
+<!-- ==================== EVENTS ==================== -->
+<section id="events">
+
+  <div class="center reveal">
+
+    <div
+      class="section-tag"
+      style="background:rgba(255,184,48,0.12);color:#B26A00"
+    >
+      📅 Events
+    </div>
+
+    <h2 class="section-title">
+      Upcoming Events
+    </h2>
+
+    <p class="section-sub">
+      Exciting activities, celebrations, and learning opportunities
+      happening soon!
+    </p>
+
+  </div>
+
+
+  <div class="choose-event-type">
+
+    <button
+      class="event-type-btn active"
+      data-event-type="events"
+      type="button"
+    >
+      Events
+    </button>
+
+    <button
+      class="event-type-btn"
+      data-event-type="classHour"
+      type="button"
+    >
+      Class Hour
+    </button>
+
+  </div>
+
+
+  <!-- EVENTS PANEL -->
+  <div class="events-grid reveal" id="eventsPanel">
+
+
+    <div class="event-card">
+
+      <div
+        class="event-banner"
+        style="background:linear-gradient(135deg,#FFE8EF,#FFC8D5)"
+      >
+        <span style="position:relative;z-index:1">🍁</span>
+      </div>
+
+      <div class="event-body">
+
+        <div
+          class="event-date-badge"
+          style="background:rgba(255,107,138,0.12);color:#C0224B"
+        >
+          October 2026
+        </div>
+
+        <h3>Autumn Ball</h3>
+
+        <p>
+          The kindergarten was beautifully decorated with colorful
+          autumn leaves, flowers, fruits, and seasonal decorations.
+          Our little ones dressed up in lovely autumn-themed costumes
+          and took part in a special celebration dedicated to the beauty
+          and richness of the autumn season.
+        </p>
+
+      </div>
+
+      <div class="event-footer">
+        <span class="event-link">
+          Details coming soon
+        </span>
+      </div>
+
+    </div>
+
+
+    <div class="event-card">
+
+      <div
+        class="event-banner"
+        style="background:linear-gradient(135deg,#E0F7FF,#B3E8FF)"
+      >
+        <span style="position:relative;z-index:1">🎄</span>
+      </div>
+
+      <div class="event-body">
+
+        <div
+          class="event-date-badge"
+          style="background:rgba(79,195,247,0.12);color:#0288D1"
+        >
+          December 2026
+        </div>
+
+        <h3>New Year</h3>
+
+        <p>
+          Our kindergarten will celebrate the New Year with joy,
+          music, dancing, fun games, and beautiful costumes.
+          It will be a magical day full of smiles and wonderful memories.
+        </p>
+
+      </div>
+
+      <div class="event-footer">
+        <span class="event-link">
+          Details coming soon
+        </span>
+      </div>
+
+    </div>
+
+
+    <div class="event-card">
+
+      <div
+        class="event-banner"
+        style="background:linear-gradient(135deg,#FFF3D0,#FFDF8A)"
+      >
+        <span style="position:relative;z-index:1">🇰🇿</span>
+      </div>
+
+      <div class="event-body">
+
+        <div
+          class="event-date-badge"
+          style="background:rgba(255,184,48,0.12);color:#B26A00"
+        >
+          March 2027
+        </div>
+
+        <h3>Nauryz</h3>
+
+        <p>
+          Our kindergarten will welcome Nauryz with a joyful celebration
+          of spring, friendship, and Kazakh traditions. The children will
+          enjoy traditional games, music, dancing, and a festive atmosphere.
+        </p>
+
+      </div>
+
+      <div class="event-footer">
+        <span class="event-link">
+          Details coming soon
+        </span>
+      </div>
+
+    </div>
+
+  </div>
+
+
+  <!-- CLASS HOUR PANEL -->
+  <div
+    class="events-grid reveal"
+    id="classHourPanel"
+    style="display:none"
+  >
+
+
+    <div class="event-card">
+
+      <div
+        class="event-banner"
+        style="background:linear-gradient(135deg,#D8F0E8,#A8E6CC)"
+      >
+        <span style="position:relative;z-index:1">🧠</span>
+      </div>
+
+      <div class="event-body">
+
+        <div
+          class="event-date-badge"
+          style="background:rgba(86,197,150,0.12);color:#1B8A59"
+        >
+          1 September
+        </div>
+
+        <h3>Day of Knowledge</h3>
+
+      </div>
+
+    </div>
+
+
+    <div class="event-card">
+
+      <div
+        class="event-banner"
+        style="background:linear-gradient(135deg,#F0EEFF,#D8CCFF)"
+      >
+        <span style="position:relative;z-index:1">🌍</span>
+      </div>
+
+      <div class="event-body">
+
+        <div
+          class="event-date-badge"
+          style="background:rgba(167,139,250,0.12);color:#5B21B6"
+        >
+          5 September
+        </div>
+
+        <h3>Day of Languages</h3>
+
+      </div>
+
+    </div>
+
+
+    <div class="event-card">
+
+      <div
+        class="event-banner"
+        style="background:linear-gradient(135deg,#4682e9,#4682e9)"
+      >
+        <span style="position:relative;z-index:1">🦅</span>
+      </div>
+
+      <div class="event-body">
+
+        <div
+          class="event-date-badge"
+          style="background:rgba(255,184,48,0.12);color:#5cb0ff"
+        >
+          20–23 October
+        </div>
+
+        <h3>Republic Day</h3>
+
+      </div>
+
+    </div>
+
+
+    <div class="event-card">
+
+      <div
+        class="event-banner"
+        style="background:linear-gradient(135deg,#F0EEFF,#38afe7)"
+      >
+        <span style="position:relative;z-index:1">🇰🇿</span>
+      </div>
+
+      <div class="event-body">
+
+        <div
+          class="event-date-badge"
+          style="background:rgba(167,139,250,0.12);color:#2732ff"
+        >
+          8–11 December
+        </div>
+
+        <h3>Independence Day</h3>
+
+      </div>
+
+    </div>
+
+
+    <div class="event-card">
+
+      <div
+        class="event-banner"
+        style="background:linear-gradient(135deg,#F0EEFF,#ecd90e)"
+      >
+        <span style="position:relative;z-index:1">🫂</span>
+      </div>
+
+      <div class="event-body">
+
+        <div
+          class="event-date-badge"
+          style="background:rgba(167,139,250,0.12);color:#5B21B6"
+        >
+          1 March 2027
+        </div>
+
+        <h3>Thanksgiving Day</h3>
+
+      </div>
+
+    </div>
+
+  </div>
+
+</section>
+
+
+<!-- ==================== TESTIMONIALS ==================== -->
+<section id="testimonials">
+
+  <div class="center reveal">
+
+    <div
+      class="section-tag"
+      style="background:rgba(86,197,150,0.12);color:var(--grass)"
+    >
+      💬 Parent Reviews
+    </div>
+
+    <h2 class="section-title">
+      💬 Parent Reviews
+    </h2>
+
+    <p class="section-sub">
+      Our greatest achievement is happy children and satisfied parents.
+    </p>
+
+  </div>
+
+
+  <div class="testimonials-grid reveal">
+
+
+    <a
+      href="https://2gis.kz/reviews/70000001041697984/review/232477430"
+      target="_blank"
+      rel="noopener noreferrer"
+      class="testi-link"
+    >
+
+      <div class="testi-card">
+
+        <div class="stars">★★★★★</div>
+
+        <div class="testi-quote">"</div>
+
+        <p>
+          Өте жақсы балабақша! Сенімді, таза әрі тәрбиешілері де
+          мейірімді жақсы жандар. Асем Бейбітбекқызына өте жақсы жан,
+          алғысымызды айтамыз💕
+        </p>
+
+        <div class="testi-author">
+
+          <div
+            class="testi-avatar"
+            style="background:#FFE8EF"
+          >
+            👩
+          </div>
+
+          <div class="testi-info">
+            <h4>Аяжан Бидахметова</h4>
+          </div>
+
+        </div>
+
+        <div class="two-gis-badge">
+          Read on 2GIS →
+        </div>
+
+      </div>
+
+    </a>
+
+
+    <a
+      href="https://2gis.kz/reviews/70000001041697984/review/232475782"
+      target="_blank"
+      rel="noopener noreferrer"
+      class="testi-link"
+    >
+
+      <div class="testi-card">
+
+        <div class="stars">★★★★★</div>
+
+        <div class="testi-quote">"</div>
+
+        <p>
+          Өте керемет балабақша, жаңа технология бойынша баланың
+          қызығушылығын арттыратын қызықты жаттығулар жасалады.
+          Қызымыз балабақшаға барамын деп асығып тұрады.
+          Асем Бейбітбекқызы бастаған бұл ұжымға алғысым шексіз.
+          Баламен тек жұмыс жасап қоймай, оларға өте мейірімді,
+          өз аналарындай қарайтын тәрбиешілерге де мың алғыс.
+          Жұмыстарыңыз өрге жүзе берсін. Асем апай еңбегіңіздің
+          жемісін көріңіз! Әр балаға өз балаңыздай қарап жүрген
+          мейірімділігіңізге шексіз ризамын! Рахмет!
+        </p>
+
+        <div class="testi-author">
+
+          <div
+            class="testi-avatar"
+            style="background:#E0F7FF"
+          >
+            👩
+          </div>
+
+          <div class="testi-info">
+            <h4>Назгуль Аубакирова</h4>
+          </div>
+
+        </div>
+
+        <div class="two-gis-badge">
+          Read on 2GIS →
+        </div>
+
+      </div>
+
+    </a>
+
+
+    <a
+      href="https://2gis.kz/reviews/70000001041697984/review/211740841"
+      target="_blank"
+      rel="noopener noreferrer"
+      class="testi-link"
+    >
+
+      <div class="testi-card">
+
+        <div class="stars">★★★★★</div>
+
+        <div class="testi-quote">"</div>
+
+        <p>
+          Советую всем очень хороший садик, воспитатели очень хорошие,
+          вежливые, трудолюбивые.
+        </p>
+
+        <div class="testi-author">
+
+          <div
+            class="testi-avatar"
+            style="background:#D8F0E8"
+          >
+            👨
+          </div>
+
+          <div class="testi-info">
+
+            <h4>Zhasulan Omirzhan</h4>
+
+            <span>
+              Частый гость<br>
+              Отзыв подтверждён
+            </span>
+
+          </div>
+
+        </div>
+
+        <div class="two-gis-badge">
+          Read on 2GIS →
+        </div>
+
+      </div>
+
+    </a>
+
+  </div>
+
+</section>
+
+
+<!-- ==================== FOOTER ==================== -->
 <footer>
+
   <div class="footer-grid">
+
+
     <div class="footer-brand">
-      <a href="#" class="nav-logo"><div class="logo-icon">⭐</div><span>Bobo Kindergarten</span></a>
-      <p>A nurturing home away from home where every child discovers their potential and shines bright.</p>
+
+      <a href="#home" class="nav-logo">
+
+        <div class="logo-icon">⭐</div>
+
+        <span>Bobo Kindergarten</span>
+
+      </a>
+
+      <p>
+        A nurturing home away from home where every child discovers
+        their potential and shines bright.
+      </p>
+
     </div>
+
+
     <div class="footer-col">
+
       <h4>Quick Links</h4>
+
       <ul>
-        <li><a href="#about">About Us</a></li>
-        <li><a href="#programs">Programs</a></li>
-        <li><a href="log.html">Parent Login</a></li>
-        <li><a href="#teachers">Our Teachers</a></li>
-        <li><a href="#gallery">Gallery</a></li>
-        <li><a href="#events">Events</a></li>
-      </ul>
-    </div>
-    <div class="footer-col">
-      <h4>Programs</h4>
-      <ul>
-        <li><a href="#programs">Zhalyn</a></li>
-        <li><a href="#programs">Kyran</a></li>
-        <li><a href="#programs">Baiterek</a></li>
-        <li><a href="#programs">Zhuldyz</a></li>
-        <li><a href="#programs">Baldauren</a></li>
-        <li><a href="#programs">Baldyrgan</a></li>
-        <li><a href="#programs">Kulynshak</a></li>
+
+        <li>
+          <a href="#about">About Us</a>
+        </li>
+
+        <li>
+          <a href="#programs">Programs</a>
+        </li>
+
+        <li>
+          <a href="log.html">Parent Login</a>
+        </li>
+
+        <li>
+          <a href="#teachers">Our Teachers</a>
+        </li>
+
+        <li>
+          <a href="#gallery">Gallery</a>
+        </li>
+
+        <li>
+          <a href="#events">Events</a>
+        </li>
 
       </ul>
+
     </div>
+
+
     <div class="footer-col">
-      <h4>Contact</h4>
+
+      <h4>Programs</h4>
+
       <ul>
-        <li><a href="tel:+77271234567">📞 +7 701 827 33 33</a></li>
-        <li><a href="mailto:hello@bobo.kz">✉️ hello@bobo.kz</a></li>
+
+        <li>
+          <a href="#programs">Zhalyn</a>
+        </li>
+
+        <li>
+          <a href="#programs">Kyran</a>
+        </li>
+
+        <li>
+          <a href="#programs">Baiterek</a>
+        </li>
+
+        <li>
+          <a href="#programs">Zhuldyz</a>
+        </li>
+
+        <li>
+          <a href="#programs">Baldauren</a>
+        </li>
+
+        <li>
+          <a href="#programs">Baldyrgan</a>
+        </li>
+
+        <li>
+          <a href="#programs">Kulynshak</a>
+        </li>
+
       </ul>
+
     </div>
+
+
+    <div class="footer-col">
+
+      <h4>Contact</h4>
+
+      <ul>
+
+        <li>
+          <a href="tel:+77018273333">
+            📞 +7 777 053 71 79
+          </a>
+        </li>
+
+
+      </ul>
+
+    </div>
+
   </div>
+
+
   <div class="footer-bottom">
-    <p>© 2026 Bobo Kindergarten. All rights reserved. Made with ❤️ for children.</p>
+
+    <p>
+      © 2026 Bobo Kindergarten.
+      All rights reserved.
+      Made with ❤️ for children.
+    </p>
+
+
     <div class="social-links">
-      <a href="https://www.instagram.com/bobo_balabaqsha/?hl=en" class="social-btn" title="Instagram">📸</a>
-      <a href="https://api.whatsapp.com/send/?phone=77025816967&text&type=phone_number&app_absent=0&utm_source=ig" class="social-btn" title="WhatsApp">💬</a>
+
+      <a
+        href="https://www.instagram.com/bobo_balabaqsha/?hl=en"
+        class="social-btn"
+        title="Instagram"
+        target="_blank"
+        rel="noopener noreferrer"
+        aria-label="Instagram"
+      >
+        📸
+      </a>
+
+      <a
+        href="https://api.whatsapp.com/send/?phone=77025816967&text&type=phone_number&app_absent=0&utm_source=ig"
+        class="social-btn"
+        title="WhatsApp"
+        target="_blank"
+        rel="noopener noreferrer"
+        aria-label="WhatsApp"
+      >
+        💬
+      </a>
+
     </div>
+
   </div>
+
 </footer>
+
+
+<!-- ==================== JAVASCRIPT ==================== -->
 <script src="script.js"></script>
+
 </body>
 </html>
