@@ -494,10 +494,113 @@
     </div>
 
 
+    <!-- TABS: MEALS / CHILDREN'S ARTWORK -->
+
+    <div
+      class="flex bg-white p-1.5 rounded-full shadow-sm border border-slate-100 gap-1"
+    >
+
+      <button
+        id="tab-food"
+        type="button"
+        onclick="switchTab('food')"
+        class="flex-1 py-2 rounded-full text-sm font-semibold transition"
+      >
+        🍽️ Тамақтану
+      </button>
+
+      <button
+        id="tab-art"
+        type="button"
+        onclick="switchTab('art')"
+        class="flex-1 py-2 rounded-full text-sm font-semibold transition"
+      >
+        🎨 Шығармашылық
+      </button>
+
+    </div>
+
+
     <div
       id="photo-list"
       class="space-y-4"
     ></div>
+
+
+    <!-- CHILDREN'S ARTWORK GALLERY -->
+
+    <div
+      id="artwork-list"
+      class="hidden"
+    ></div>
+
+  </div>
+
+
+  <!-- ========================================================= -->
+  <!-- ARTWORK DETAIL MODAL -->
+  <!-- ========================================================= -->
+
+  <div
+    id="artwork-modal"
+    class="fixed inset-0 bg-slate-900/60 flex items-center justify-center p-4 z-50 hidden"
+    onclick="closeArtwork(event)"
+  >
+
+    <div
+      class="bg-white w-full max-w-md max-h-full overflow-y-auto rounded-3xl shadow-lg border border-slate-100"
+    >
+
+      <div class="relative bg-[#EAF7F0] rounded-t-3xl">
+
+        <a
+          id="art-modal-link"
+          target="_blank"
+          rel="noopener"
+        >
+          <img
+            id="art-modal-img"
+            alt=""
+            class="w-full max-h-[60vh] object-contain rounded-t-3xl"
+          />
+        </a>
+
+        <button
+          type="button"
+          onclick="closeArtwork()"
+          aria-label="Close"
+          class="absolute top-3 right-3 w-9 h-9 rounded-full bg-white/90 shadow text-slate-600 font-bold"
+        >
+          ✕
+        </button>
+
+      </div>
+
+      <div class="p-5 space-y-3">
+
+        <span
+          id="art-modal-category"
+          class="inline-block text-xs font-bold px-3 py-1 rounded-full"
+        ></span>
+
+        <h3
+          id="art-modal-title"
+          class="text-xl font-extrabold text-slate-800"
+        ></h3>
+
+        <p
+          id="art-modal-meta"
+          class="text-xs text-slate-500 font-medium leading-relaxed whitespace-pre-line"
+        ></p>
+
+        <p
+          id="art-modal-desc"
+          class="text-sm text-slate-600 bg-[#F3EFFF] rounded-2xl p-3"
+        ></p>
+
+      </div>
+
+    </div>
 
   </div>
 
@@ -514,6 +617,10 @@
     let allChildren = [];
 
     let currentLang = "kk";
+
+    let currentTab = "food";
+
+    let currentArtworks = null;
 
 
     /* ========================================================= */
@@ -569,6 +676,40 @@
         teacherPrefix: "Тәрбиеші: ",
 
         timePrefix: "Уақыты: ",
+
+        tabFood: "Тамақтану",
+
+        tabArt: "Шығармашылық",
+
+        artTitle: "Балалар шығармашылығы",
+
+        artSub: "Балаңыздың шығармашылық жұмыстары",
+
+        noArtworks: "Әзірге жұмыстар жоқ 🎨",
+
+        noArtworksSub: "Жақында мұнда жаңа суреттер мен қолөнер пайда болады!",
+
+        childPrefix: "Бала: ",
+
+        datePrefix: "Күні: ",
+
+        noDescription: "Сипаттама жоқ",
+
+        artLoadError: "Жұмыстарды жүктеу мүмкін болмады.",
+
+        categories: {
+
+          DRAWING: "Сурет",
+
+          PAINTING: "Кескіндеме",
+
+          CRAFT: "Қолөнер",
+
+          MODELING: "Мүсіндеу",
+
+          OTHER: "Басқа"
+
+        },
 
         meals: {
 
@@ -633,6 +774,40 @@
 
         timePrefix: "Время: ",
 
+        tabFood: "Питание",
+
+        tabArt: "Творчество",
+
+        artTitle: "Творчество детей",
+
+        artSub: "Творческие работы вашего ребенка",
+
+        noArtworks: "Пока нет работ 🎨",
+
+        noArtworksSub: "Скоро здесь появятся новые рисунки и поделки!",
+
+        childPrefix: "Ребенок: ",
+
+        datePrefix: "Дата: ",
+
+        noDescription: "Без описания",
+
+        artLoadError: "Не удалось загрузить работы.",
+
+        categories: {
+
+          DRAWING: "Рисунок",
+
+          PAINTING: "Живопись",
+
+          CRAFT: "Поделка",
+
+          MODELING: "Лепка",
+
+          OTHER: "Другое"
+
+        },
+
         meals: {
 
           Breakfast: "Завтрак",
@@ -695,6 +870,40 @@
         teacherPrefix: "Teacher: ",
 
         timePrefix: "Time: ",
+
+        tabFood: "Meals",
+
+        tabArt: "Art",
+
+        artTitle: "Children's Artwork",
+
+        artSub: "Your child's creative works",
+
+        noArtworks: "No artworks yet 🎨",
+
+        noArtworksSub: "New drawings and crafts will appear here soon!",
+
+        childPrefix: "Child: ",
+
+        datePrefix: "Date: ",
+
+        noDescription: "No description",
+
+        artLoadError: "Failed to load artworks.",
+
+        categories: {
+
+          DRAWING: "Drawing",
+
+          PAINTING: "Painting",
+
+          CRAFT: "Craft",
+
+          MODELING: "Modeling",
+
+          OTHER: "Other"
+
+        },
 
         meals: {
 
@@ -869,12 +1078,9 @@
         t.cancelBtn;
 
 
-      document.getElementById("t-feed-title").innerText =
-        t.feedTitle;
+      renderFeedHeader();
 
-
-      document.getElementById("t-feed-sub").innerText =
-        t.feedSub;
+      renderArtworks();
 
 
       document.getElementById("t-logout-btn").innerText =
@@ -1333,6 +1539,11 @@
         .remove("hidden");
 
 
+      switchTab(currentTab);
+
+      loadArtworks(childId);
+
+
       const photoList =
         document.getElementById(
           "photo-list"
@@ -1624,6 +1835,348 @@
       }
 
     }
+
+
+    /* ========================================================= */
+    /* CHILDREN'S ARTWORK */
+    /* ========================================================= */
+
+    const categoryStyles = {
+
+      DRAWING: {
+        icon: "✏️",
+        cls: "bg-sky-100 text-sky-700"
+      },
+
+      PAINTING: {
+        icon: "🖌️",
+        cls: "bg-pink-100 text-pink-700"
+      },
+
+      CRAFT: {
+        icon: "✂️",
+        cls: "bg-amber-100 text-amber-700"
+      },
+
+      MODELING: {
+        icon: "🏺",
+        cls: "bg-emerald-100 text-emerald-700"
+      },
+
+      OTHER: {
+        icon: "⭐",
+        cls: "bg-violet-100 text-violet-700"
+      }
+
+    };
+
+
+    /* Titles and descriptions are typed by teachers, so they are escaped before display. */
+
+    function escapeHtml(value) {
+
+      return String(value == null ? "" : value)
+        .replace(/&/g, "&amp;")
+        .replace(/</g, "&lt;")
+        .replace(/>/g, "&gt;")
+        .replace(/"/g, "&quot;")
+        .replace(/'/g, "&#39;");
+    }
+
+
+    function categoryInfo(category) {
+
+      const key =
+        categoryStyles[category]
+          ? category
+          : "OTHER";
+
+      return {
+        label:
+          categoryStyles[key].icon +
+          " " +
+          translations[currentLang].categories[key],
+        cls: categoryStyles[key].cls
+      };
+    }
+
+
+    /* Server time is UTC; shown in Kazakhstan time (UTC+5), like the meal photos. */
+
+    function formatArtDate(value) {
+
+      if (!value) return "";
+
+      let timeStr = String(value).trim();
+
+      if (
+        !timeStr.endsWith("Z") &&
+        !timeStr.includes("+")
+      ) {
+        timeStr += "Z";
+      }
+
+      const dateObj = new Date(timeStr);
+
+      if (isNaN(dateObj.getTime())) return "";
+
+      const local =
+        new Date(
+          dateObj.getTime() + 5 * 60 * 60 * 1000
+        );
+
+      const dd =
+        String(local.getUTCDate()).padStart(2, "0");
+
+      const mm =
+        String(local.getUTCMonth() + 1).padStart(2, "0");
+
+      return `${dd}.${mm}.${local.getUTCFullYear()}`;
+    }
+
+
+    function renderFeedHeader() {
+
+      const t = translations[currentLang];
+
+      const isArt = currentTab === "art";
+
+      document.getElementById("t-feed-title").innerText =
+        isArt ? t.artTitle : t.feedTitle;
+
+      document.getElementById("t-feed-sub").innerText =
+        isArt ? t.artSub : t.feedSub;
+
+      document.getElementById("tab-food").innerText =
+        "🍽️ " + t.tabFood;
+
+      document.getElementById("tab-art").innerText =
+        "🎨 " + t.tabArt;
+    }
+
+
+    function switchTab(tab) {
+
+      currentTab = tab;
+
+      const isArt = tab === "art";
+
+      document
+        .getElementById("photo-list")
+        .classList
+        .toggle("hidden", isArt);
+
+      document
+        .getElementById("artwork-list")
+        .classList
+        .toggle("hidden", !isArt);
+
+      const active =
+        "flex-1 py-2 rounded-full text-sm font-semibold transition bg-[#5BAA80] text-white shadow-sm";
+
+      const inactive =
+        "flex-1 py-2 rounded-full text-sm font-semibold transition text-slate-500 hover:text-emerald-600";
+
+      document.getElementById("tab-food").className =
+        isArt ? inactive : active;
+
+      document.getElementById("tab-art").className =
+        isArt ? active : inactive;
+
+      renderFeedHeader();
+    }
+
+
+    /* Parents only ever load the artworks of their own child. */
+
+    async function loadArtworks(childId) {
+
+      const list =
+        document.getElementById("artwork-list");
+
+      try {
+
+        const res =
+          await fetch(
+            `${API_BASE}/artworks/child/${encodeURIComponent(childId)}`
+          );
+
+        if (!res.ok) {
+          throw new Error("HTTP " + res.status);
+        }
+
+        currentArtworks = await res.json();
+
+        renderArtworks();
+
+      } catch (err) {
+
+        currentArtworks = null;
+
+        list.innerHTML =
+          `
+            <p class="text-center text-red-500 py-8">
+              ${translations[currentLang].artLoadError}
+            </p>
+          `;
+      }
+    }
+
+
+    function renderArtworks() {
+
+      if (!currentArtworks) return;
+
+      const t = translations[currentLang];
+
+      const list =
+        document.getElementById("artwork-list");
+
+      if (currentArtworks.length === 0) {
+
+        list.innerHTML =
+          `
+            <div class="bg-white rounded-3xl shadow-sm border border-slate-100 text-center px-6 py-10">
+              <div class="text-5xl mb-3">🦕</div>
+              <p class="font-bold text-slate-700">
+                ${t.noArtworks}
+              </p>
+              <p class="text-sm text-slate-400 mt-1">
+                ${t.noArtworksSub}
+              </p>
+            </div>
+          `;
+
+        return;
+      }
+
+      list.innerHTML =
+        `<div class="grid grid-cols-2 gap-3">` +
+        currentArtworks
+          .map((a, index) => {
+
+            const cat = categoryInfo(a.category);
+
+            return `
+              <button
+                type="button"
+                onclick="openArtwork(${index})"
+                class="text-left bg-white rounded-3xl overflow-hidden shadow-sm border border-slate-100 hover:shadow-md transition"
+              >
+                <div class="relative">
+                  <img
+                    src="${escapeHtml(a.imageUrl)}"
+                    alt="${escapeHtml(a.title)}"
+                    loading="lazy"
+                    class="w-full h-40 object-cover bg-[#EAF7F0]"
+                  />
+                  <span
+                    class="absolute top-2 left-2 text-[10px] font-bold px-2 py-1 rounded-full ${cat.cls}"
+                  >
+                    ${cat.label}
+                  </span>
+                </div>
+                <div class="p-3">
+                  <span class="font-bold text-slate-700 text-sm block leading-snug break-words">
+                    ${escapeHtml(a.title)}
+                  </span>
+                  <span class="text-xs text-slate-400 font-medium block mt-1">
+                    📅 ${formatArtDate(a.uploadDate)}
+                  </span>
+                </div>
+              </button>
+            `;
+          })
+          .join("") +
+        `</div>`;
+    }
+
+
+    function openArtwork(index) {
+
+      const a =
+        currentArtworks && currentArtworks[index];
+
+      if (!a) return;
+
+      const t = translations[currentLang];
+
+      const cat = categoryInfo(a.category);
+
+      document.getElementById("art-modal-img").src =
+        a.imageUrl;
+
+      document.getElementById("art-modal-link").href =
+        a.imageUrl;
+
+      const badge =
+        document.getElementById("art-modal-category");
+
+      badge.className =
+        "inline-block text-xs font-bold px-3 py-1 rounded-full " +
+        cat.cls;
+
+      badge.innerText = cat.label;
+
+      document.getElementById("art-modal-title").innerText =
+        a.title || "";
+
+      const meta = [];
+
+      if (a.childName) {
+        meta.push(
+          t.childPrefix +
+          a.childName +
+          (a.groupName ? " · " + a.groupName : "")
+        );
+      }
+
+      meta.push(
+        t.datePrefix + formatArtDate(a.uploadDate)
+      );
+
+      if (a.teacherName) {
+        meta.push(t.teacherPrefix + a.teacherName);
+      }
+
+      document.getElementById("art-modal-meta").textContent =
+        meta.join("\n");
+
+      document.getElementById("art-modal-desc").innerText =
+        a.description || t.noDescription;
+
+      document
+        .getElementById("artwork-modal")
+        .classList
+        .remove("hidden");
+    }
+
+
+    function closeArtwork(event) {
+
+      /* A click inside the card keeps it open; the backdrop and the ✕ button close it. */
+
+      if (
+        event &&
+        event.target !==
+          document.getElementById("artwork-modal")
+      ) {
+        return;
+      }
+
+      document
+        .getElementById("artwork-modal")
+        .classList
+        .add("hidden");
+    }
+
+
+    document.addEventListener(
+      "keydown",
+      e => {
+        if (e.key === "Escape") closeArtwork();
+      }
+    );
 
 
     /* ========================================================= */
