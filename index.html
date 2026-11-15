@@ -20,7 +20,7 @@
 <nav id="navbar">
 
   <a href="#home" class="nav-logo">
-    <div class="logo-icon">⭐</div>
+    <img class="logo-mascot" src="images/bobo_mascot.png" alt="BOBO">
     <span>Bobo Kindergarten</span>
   </a>
 
@@ -31,6 +31,7 @@
     <a href="#schedule" data-i18n="schedule">Schedule</a>
     <a href="#teachers" data-i18n="teachers">Teachers</a>
     <a href="#gallery" data-i18n="gallery">Gallery</a>
+    <a href="#portal" data-i18n="portalNav">Parent portal</a>
     <a href="log.html" class="nav-portal" data-i18n="login">Child's food</a>
     <a href="#events" data-i18n="events">Events</a>
   </div>
@@ -76,6 +77,9 @@
       <a href="log.html" class="btn-secondary" data-i18n="heroBtn">
         👩‍🍳 Child's food
       </a>
+      <a href="log.html#art" class="btn-primary" data-i18n="heroArtBtn">
+        🎨 Children's Artwork
+      </a>
     </div>
 
     <div class="hero-stats">
@@ -118,15 +122,17 @@
 
       <div class="hero-main-card">
 
-        <div class="hero-emoji-grid">
+        <img
+          class="hero-mascot"
+          src="images/bobo_mascot.png"
+          alt="BOBO the dinosaur"
+        >
 
+        <div class="hero-emoji-row">
           <div class="hero-emoji" style="background:#FFF0C8">🎨</div>
           <div class="hero-emoji" style="background:#E0F7FF">📚</div>
           <div class="hero-emoji" style="background:#FFE8EF">🎵</div>
           <div class="hero-emoji" style="background:#D8F0E8">🌱</div>
-          <div class="hero-emoji" style="background:#F0EEFF">🧩</div>
-          <div class="hero-emoji" style="background:#FFF3E8">⚽</div>
-
         </div>
 
       </div>
@@ -1098,6 +1104,68 @@
 </section>
 
 
+<!-- ==================== PARENT PORTAL ==================== -->
+<section id="portal">
+
+  <div class="center reveal">
+
+    <div
+      class="section-tag"
+      style="background:rgba(167,139,250,0.14);color:#6D4FD8"
+      data-i18n="portalTag"
+    >
+      🦕 Parent portal
+    </div>
+
+    <h2 class="section-title" data-i18n="portalTitle">
+      See your child's day with BOBO
+    </h2>
+
+    <p class="section-sub" data-i18n="portalSub">
+      Log in to the parent portal or the BOBO app to see what your child
+      ate and created today.
+    </p>
+
+  </div>
+
+
+  <div class="portal-grid reveal">
+
+    <a href="log.html" class="portal-card food">
+
+      <div class="portal-icon">🍲</div>
+
+      <h3 data-i18n="portalFoodTitle">Meals</h3>
+
+      <p data-i18n="portalFoodText">
+        Photos of breakfast, lunch and snacks, sent by the teacher every day.
+      </p>
+
+      <span class="portal-link" data-i18n="portalOpen">Open →</span>
+
+    </a>
+
+
+    <a href="log.html#art" class="portal-card art">
+
+      <div class="portal-icon">🎨</div>
+
+      <h3 data-i18n="portalArtTitle">Children's Artwork</h3>
+
+      <p data-i18n="portalArtText">
+        Drawings, paintings, crafts and modeling: a personal gallery of
+        your child's creative works.
+      </p>
+
+      <span class="portal-link" data-i18n="portalOpen">Open →</span>
+
+    </a>
+
+  </div>
+
+</section>
+
+
 <!-- ==================== EVENTS ==================== -->
 <section id="events">
 
@@ -1580,7 +1648,7 @@
 
       <a href="#home" class="nav-logo">
 
-        <div class="logo-icon">⭐</div>
+        <img class="logo-mascot" src="images/bobo_mascot.png" alt="BOBO">
 
         <span>Bobo Kindergarten</span>
 

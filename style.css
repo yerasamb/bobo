@@ -393,3 +393,34 @@
   object-fit: cover;
   display: block;
 }
+
+
+/* ── BOBO mascot ── */
+.nav-logo .logo-mascot { width: 46px; height: 46px; border-radius: 50%; object-fit: cover; box-shadow: 0 4px 12px rgba(86,197,150,0.35); }
+.hero-main-card { background: linear-gradient(160deg, #E8FBF2 0%, #EAF4FF 100%); }
+.hero-mascot { width: 250px; max-width: 100%; height: auto; border-radius: 50%; animation: float 3.2s ease-in-out infinite; filter: drop-shadow(0 14px 24px rgba(45,42,62,0.15)); }
+.hero-emoji-row { display: flex; gap: 12px; }
+.hero-emoji-row .hero-emoji { width: 54px; height: 54px; font-size: 1.6rem; border-radius: 16px; }
+.hero-emoji-row .hero-emoji:nth-child(2) { animation-delay: .4s; }
+.hero-emoji-row .hero-emoji:nth-child(3) { animation-delay: .8s; }
+.hero-emoji-row .hero-emoji:nth-child(4) { animation-delay: 1.2s; }
+
+/* ── PARENT PORTAL ── */
+#portal { background: linear-gradient(180deg, var(--cream) 0%, #F6F1FF 100%); }
+.portal-grid { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 24px; max-width: 900px; margin: 0 auto; }
+.portal-card { display: flex; flex-direction: column; gap: 10px; padding: 32px; border-radius: 28px; text-decoration: none; color: var(--dark); box-shadow: var(--shadow); transition: transform .25s, box-shadow .25s; }
+.portal-card:hover { transform: translateY(-4px); box-shadow: 0 16px 40px rgba(45,42,62,0.14); }
+.portal-card.food { background: #FFF3CC; }
+.portal-card.art { background: #EEE9FF; }
+.portal-icon { width: 64px; height: 64px; border-radius: 50%; background: rgba(255,255,255,0.8); display: flex; align-items: center; justify-content: center; font-size: 2rem; }
+.portal-card h3 { font-family: 'Quicksand', sans-serif; font-size: 1.4rem; font-weight: 800; }
+.portal-card p { color: var(--mid); line-height: 1.6; }
+.portal-link { margin-top: auto; font-weight: 800; }
+.portal-card.food .portal-link { color: #9A6B00; }
+.portal-card.art .portal-link { color: #5F4BC0; }
+
+@media (max-width: 700px) {
+  .portal-grid { grid-template-columns: 1fr; }
+  .portal-card { padding: 24px; }
+  .hero-mascot { width: 200px; }
+}

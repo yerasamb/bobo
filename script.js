@@ -30,7 +30,18 @@ const translations = {
     stat1: 'Жылдық тәжірибе',
     stat2: 'Бақытты түлектер',
     stat3: 'Маман мұғалімдер',
-    stat4: 'Ата-ана рейтингі'
+    stat4: 'Ата-ана рейтингі',
+
+    portalNav: "Ата-ана порталы",
+    heroArtBtn: "🎨 Балалар шығармашылығы",
+    portalTag: "🦕 Ата-ана порталы",
+    portalTitle: "Балаңыздың күнін BOBO-мен бірге көріңіз",
+    portalSub: "Балаңыздың бүгін не жегенін және не жасағанын көру үшін ата-ана порталына немесе BOBO қосымшасына кіріңіз.",
+    portalFoodTitle: "Тамақтану",
+    portalFoodText: "Тәрбиеші күн сайын жіберетін таңғы ас, түскі ас және бесіндік фотолары.",
+    portalArtTitle: "Балалар шығармашылығы",
+    portalArtText: "Суреттер, кескіндеме, қолөнер және мүсіндеу: балаңыздың шығармашылық жұмыстарының жеке галереясы.",
+    portalOpen: "Ашу →"
   },
 
 
@@ -55,7 +66,18 @@ const translations = {
     stat1: 'Лет опыта',
     stat2: 'Счастливых выпускников',
     stat3: 'Опытных педагогов',
-    stat4: 'Рейтинг родителей'
+    stat4: 'Рейтинг родителей',
+
+    portalNav: "Портал родителей",
+    heroArtBtn: "🎨 Творчество детей",
+    portalTag: "🦕 Портал родителей",
+    portalTitle: "День вашего ребёнка вместе с BOBO",
+    portalSub: "Войдите в портал родителей или приложение BOBO, чтобы увидеть, что ваш ребёнок ел и создавал сегодня.",
+    portalFoodTitle: "Питание",
+    portalFoodText: "Фото завтрака, обеда и полдника, которые воспитатель отправляет каждый день.",
+    portalArtTitle: "Творчество детей",
+    portalArtText: "Рисунки, живопись, поделки и лепка: личная галерея творческих работ вашего ребёнка.",
+    portalOpen: "Открыть →"
   },
 
 
@@ -80,7 +102,18 @@ const translations = {
     stat1: 'Years of Experience',
     stat2: 'Happy Graduates',
     stat3: 'Expert Teachers',
-    stat4: 'Parent Rating'
+    stat4: 'Parent Rating',
+
+    portalNav: "Parent portal",
+    heroArtBtn: "🎨 Children's Artwork",
+    portalTag: "🦕 Parent portal",
+    portalTitle: "See your child's day with BOBO",
+    portalSub: "Log in to the parent portal or the BOBO app to see what your child ate and created today.",
+    portalFoodTitle: "Meals",
+    portalFoodText: "Photos of breakfast, lunch and snacks, sent by the teacher every day.",
+    portalArtTitle: "Children's Artwork",
+    portalArtText: "Drawings, paintings, crafts and modeling: a personal gallery of your child's creative works.",
+    portalOpen: "Open →"
   }
 
 };

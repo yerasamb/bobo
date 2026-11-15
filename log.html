@@ -618,7 +618,10 @@
 
     let currentLang = "kk";
 
-    let currentTab = "food";
+    let currentTab =
+      window.location.hash === "#art"
+        ? "art"
+        : "food";
 
     let currentArtworks = null;
 
